@@ -1,0 +1,87 @@
+// var requestUrl = 'https://api.thedogapi.com/v1/breeds/';
+
+// var responseText = document.getElementById('response-text');
+
+// function getApi(requestUrl) {
+//   fetch(requestUrl)
+//     .then(function (response) {
+//     //   console.log(response);
+//     //   if (response.status === 200) {
+//     //     responseText.textContent = response.status;
+//     //   }
+//         let ids = response.json();
+//         console.log(ids);
+//         // return response.json();
+//   });
+// }
+
+// getApi(requestUrl);
+
+// DOGGOS AND CODES
+// 86 Cocker Spaniel
+// 30 Basset Hound
+// 31 Beagle
+// 50 Border Collie
+// 53 Boston Terrier
+// 10 Bulldog
+// 77 Chihuahua
+// 91 Dachshund
+// 92 Dalmatian
+// 94 Dobermann Pinscher
+// 115 German Sheperd
+// 121 Golden Retriever
+// 124 Great Dane
+// 127 Greyhound
+// 149 Labrador
+// 168 Miniature Schnauzer
+// 15 Pitbull
+// 201 Pug 
+// 210 Rottweiler
+// 212 Saint Bernard
+// 223 Shih Tzu
+// 226 Siberian Husky
+// 197 Poodle
+// 253 Weimaraner
+// 264 Yorkshire Terrier
+
+$(document).ready(function() {
+    BindControls();
+});
+
+function BindControls() {
+    let breedList = [
+        "Basset Hound",
+        "Beagle",
+        "Border Collie",
+        "Boston Terrier",
+        "Bulldog",
+        "Chihuahua",
+        "Cocker Spaniel",
+        "Dachshund",
+        "Dalmatian",
+        "Dobermann Pinscher",
+        "German Sheperd",
+        "Golden Retriever",
+        "Great Dane",
+        "Greyhound",
+        "Labrador",
+        "Miniature Schnauzer",
+        "Pitbull",
+        "Poodle",
+        "Pug",
+        "Rottweiler",
+        "Saint Bernard",
+        "Shih Tzu",
+        "Siberian Husky",
+        "Weimaraner",
+        "Yorkshire Terrier"
+    ];
+
+    $('#tbBreeds').autocomplete({
+        source: breedList,
+        minLength: 0,
+        scroll: true
+    }).focus(function() {
+        $(this).autocomplete("search", "");
+    });
+}
