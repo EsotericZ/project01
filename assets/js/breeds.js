@@ -85,3 +85,31 @@ function BindControls() {
         $(this).autocomplete("search", "");
     });
 }
+
+// WHEN PAGE LOADS - POPUP TO SELECT DOG BREED OR CANCLE TO HOMEPAGE
+function deselect(e) {
+    $('.pop').slideFadeToggle(function() {
+        e.removeClass('selected');
+    });    
+}
+
+$(function() {
+    window.onload = function() {
+        if($(this).hasClass('selected')) {
+            deselect($(this));               
+        } else {
+            $(this).addClass('selected');
+            $('.pop').slideFadeToggle();
+        }
+      return false;
+    };
+  
+    $('.close').on('click', function() {
+        window.location.replace("index.html");
+        return false;
+    });
+});
+  
+$.fn.slideFadeToggle = function(easing, callback) {
+    return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+};
