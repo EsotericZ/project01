@@ -1,21 +1,22 @@
 // var requestUrl = 'https://api.thedogapi.com/v1/breeds/';
-
+// var requestUrl = "https://actmapi-actgov.opendata.arcgis.com/datasets/dog-parks/api";
+var requestUrl = "https://data.actmapi.act.gov.au/arcgis/rest/services/data_extract/Community_Facilities_and_Assets/MapServer/5/query?where=1%3D1&outFields=*&outSR=4326&f=json"
 // var responseText = document.getElementById('response-text');
 
-// function getApi(requestUrl) {
-//   fetch(requestUrl)
-//     .then(function (response) {
-//     //   console.log(response);
-//     //   if (response.status === 200) {
-//     //     responseText.textContent = response.status;
-//     //   }
-//         let ids = response.json();
-//         console.log(ids);
-//         // return response.json();
-//   });
-// }
+function getApi(requestUrl) {
+  fetch(requestUrl)
+    .then(function (response) {
+    //   console.log(response);
+    //   if (response.status === 200) {
+    //     responseText.textContent = response.status;
+    //   }
+        let ids = response.json();
+        console.log(ids);
+        // return response.json();
+  });
+}
 
-// getApi(requestUrl);
+getApi(requestUrl);
 
 // DOGGOS AND CODES
 // 86 Cocker Spaniel
@@ -86,17 +87,23 @@ function BindControls() {
     });
 }
 
+// $("#message_submit").click(function() {
+//     console.log("dogs")
+// });
+
 // WHEN PAGE LOADS - POPUP TO SELECT DOG BREED OR CANCLE TO HOMEPAGE
 function deselect(e) {
     $('.pop').slideFadeToggle(function() {
         e.removeClass('selected');
-    });    
+    });
 }
+
+let dogBreed
 
 $(function() {
     window.onload = function() {
         if($(this).hasClass('selected')) {
-            deselect($(this));               
+            deselect($(this));
         } else {
             $(this).addClass('selected');
             $('.pop').slideFadeToggle();
@@ -104,6 +111,12 @@ $(function() {
       return false;
     };
   
+    $('.message_submit').on('click', function() {
+        dogBreed = $('#tbBreeds').val();
+        deselect($(this));
+        return false;
+    })
+
     $('.close').on('click', function() {
         window.location.replace("index.html");
         return false;
