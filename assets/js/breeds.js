@@ -29,17 +29,31 @@ let allBreeds = [
 var requestUrl = 'https://api.thedogapi.com/v1/breeds/';
 // var responseText = document.getElementById('response-text');
 
+let ids;
+
+
 function getApi(requestUrl) {
-  fetch(requestUrl)
-    .then(function (response) {
+//   fetch(requestUrl)
+    // .then(function (response) {
+    // .then(function (data) {
     //   console.log(response);
     //   if (response.status === 200) {
     //     responseText.textContent = response.status;
     //   }
-        let ids = response.json();
-        console.log(ids);
-        // return response.json();
-  });
+        // ids = response.json();
+        // console.log('data', JSON.stringify(data))
+        // ids = data.json();
+        // console.log('id', ids);
+        // return ids;
+//   });
+    // fetch('https://api.thedogapi.com/v1/breeds/')
+    fetch(requestUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            ids = data;
+        });
 }
 
 getApi(requestUrl);
@@ -93,7 +107,7 @@ function deselect(e) {
     });
 }
 
-let dogBreed, dogBreedNo, cmp1, cmpNo1, cmp2, cmpNo2, cmp3, cmpNo3, cmp4, cmpNo4, cmp5, cmpNo5, cmpL, cmpNoL
+let dogBreed, dogBreedNo, cmp1, cmpNo1, cmp2, cmpNo2, cmp3, cmpNo3, cmp4, cmpNo4, cmp5, cmpNo5, cmpL, cmpNoL;
 
 $(function() {
     window.onload = function() {
@@ -161,4 +175,28 @@ function dogInfo() {
     for (let i = 0; i < compBreed.length; i++) {
         $(".container").append(`<li>${compBreed[i]}      ${compStrength[i]}</li>`);
     }
+
+    console.log(dogBreedNo, dogBreed)
+    // OUR DOGS INFO
+    let dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, homeSpan, temperament;
+    dogPic = ids[dogBreedNo].image;
+    dogWeight = ids[dogBreedNo].weight.imperial;
+    dogHeight = ids[dogBreedNo].height.imperial;
+    bredFor = ids[dogBreedNo].bred_for;
+    breedingGroup = ids[dogBreedNo].breed_group;
+    lifeSpan = ids[dogBreedNo].life_span;
+    temperament = ids[dogBreedNo].temperament;
+    console.log(dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, homeSpan, temperament)
 }
+
+// FINISHED VARIABLES
+// dogBreed        Breed of dog
+// dogPic          Picture
+// dogWeight       Weight Range
+// dogHeight       Height Range
+// bredFor         What it's bred to do
+// breedingGroup   Group it breeds with children
+// lifeSpan        Expected Lifespan
+// temperament     Mannerisms
+// compBreed       List of Compatible dog breeds
+// compBreedNo     Number of compatability
