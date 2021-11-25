@@ -7,39 +7,53 @@ let allBreeds = [
     ["Bulldog", 10, 127, 6, 212, 5, 168, 4, 50, 3, 91, 3, 77, 1],
     ["Chihuahua", 77, 53, 9, 127, 9, 264, 9, 201, 8, 30, 6, 10, 1],
     ["Dachshund", 91, 53, 9, 121, 8, 149, 8, 30, 7, 31, 7, 15, 1],
-    ["Dalmatian", 92, 31, 8, 77, 8, 253, 8, 15, 7, 168, 6, 15, 1],
+    ["Dalmatian", 92, 31, 8, 86, 8, 253, 8, 197, 7, 168, 6, 15, 1],
     ["Dobermann Pinscher", 94, 121, 8, 149, 8, 226, 7, 92, 6, 124, 6, 31, 1],
-    ["German Sheperd", 115, 50, 9, 115, 9, 53, 8, 149, 8, 168, 8, 201, 1],
+    ["German Shepherd", 115, 50, 9, 53, 8, 149, 8, 168, 8, 50, 8, 201, 1],
     ["Golden Retriever", 121, 31, 9, 53, 9, 127, 9, 149, 9, 168, 9, 15, 1],
-    ["Great Dane", 124, 50, 9, 53, 9, 226, 8, 77, 7, 121, 7, 15, 1],
+    ["Great Dane", 124, 50, 9, 53, 9, 226, 8, 86, 7, 121, 7, 15, 1],
     ["Greyhound", 127, 31, 9, 53, 9, 77, 9, 121, 9, 127, 9, 10, 1],
-    ["Labrador", 149, 121, 10, 149, 10, 31, 9, 53, 9, 127, 9, 15, 1],
+    ["Labrador", 149, 121, 10, 31, 9, 53, 9, 127, 9, 212, 9, 15, 1],
     ["Miniature Schnauzer", 168, 50, 9, 53, 9, 121, 9, 149, 9, 115, 8, 201, 1],
-    ["Pitbull", 15, 77, 1, 30, 1, 31, 1, 50, 1, 53, 1, 10, 1],
+    ["Pitbull", 15, 86, 1, 30, 1, 31, 1, 50, 1, 53, 1, 10, 1],
     ["Pug", 201, 91, 9, 121, 9, 124, 9, 127, 9, 149, 9, 15, 1],
-    ["Rottweiler", 210, 50, 7, 92, 6, 115, 6, 226, 6, 77, 5, 10, 1],
-    ["Saint Bernard", 212, 115, 7, 15, 7, 253, 7, 77, 6, 94, 6, 15, 1],
-    ["Shih Tzu", 223, 15, 8, 127, 7, 264, 7, 121, 6, 149, 6, 15, 1],
+    ["Rottweiler", 210, 50, 7, 92, 6, 115, 6, 226, 6, 86, 5, 10, 1],
+    ["Saint Bernard", 212, 115, 7, 197, 7, 253, 7, 86, 6, 94, 6, 15, 1],
+    ["Shih Tzu", 223, 197, 8, 127, 7, 264, 7, 121, 6, 149, 6, 15, 1],
     ["Siberian Husky", 226, 223, 9, 124, 8, 94, 7, 127, 7, 264, 7, 10, 1],
     ["Poodle", 197, 53, 9, 201, 9, 121, 8, 149, 8, 92, 7, 15, 1],
-    ["Weimaraner", 253, 77, 9, 115, 9, 121, 9, 149, 9, 253, 9, 10, 1],
+    ["Weimaraner", 253, 86, 9, 115, 9, 121, 9, 149, 9, 253, 9, 10, 1],
     ["Yorkshire Terrier", 264, 77, 9, 50, 8, 168, 8, 30, 7, 31, 7, 15, 1]
 ];
 
 var requestUrl = 'https://api.thedogapi.com/v1/breeds/';
 // var responseText = document.getElementById('response-text');
 
+let ids;
+
+
 function getApi(requestUrl) {
-  fetch(requestUrl)
-    .then(function (response) {
+//   fetch(requestUrl)
+    // .then(function (response) {
+    // .then(function (data) {
     //   console.log(response);
     //   if (response.status === 200) {
     //     responseText.textContent = response.status;
     //   }
-        let ids = response.json();
-        console.log(ids);
-        // return response.json();
-  });
+        // ids = response.json();
+        // console.log('data', JSON.stringify(data))
+        // ids = data.json();
+        // console.log('id', ids);
+        // return ids;
+//   });
+    // fetch('https://api.thedogapi.com/v1/breeds/')
+    fetch(requestUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            ids = data;
+        });
 }
 
 getApi(requestUrl);
@@ -60,7 +74,7 @@ function BindControls() {
         "Dachshund",
         "Dalmatian",
         "Dobermann Pinscher",
-        "German Sheperd",
+        "German Shepherd",
         "Golden Retriever",
         "Great Dane",
         "Greyhound",
@@ -93,7 +107,7 @@ function deselect(e) {
     });
 }
 
-let dogBreed, dogBreedNo, cmp1, cmpNo1, cmp2, cmpNo2, cmp3, cmpNo3, cmp4, cmpNo4, cmp5, cmpNo5, cmpL, cmpNoL
+let dogBreed, dogBreedNo, cmp1, cmpNo1, cmp2, cmpNo2, cmp3, cmpNo3, cmp4, cmpNo4, cmp5, cmpNo5, cmpL, cmpNoL;
 
 $(function() {
     window.onload = function() {
@@ -161,4 +175,28 @@ function dogInfo() {
     for (let i = 0; i < compBreed.length; i++) {
         $(".container").append(`<li>${compBreed[i]}      ${compStrength[i]}</li>`);
     }
+
+    console.log(dogBreedNo, dogBreed)
+    // OUR DOGS INFO
+    let dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, homeSpan, temperament;
+    dogPic = ids[dogBreedNo].image;
+    dogWeight = ids[dogBreedNo].weight.imperial;
+    dogHeight = ids[dogBreedNo].height.imperial;
+    bredFor = ids[dogBreedNo].bred_for;
+    breedingGroup = ids[dogBreedNo].breed_group;
+    lifeSpan = ids[dogBreedNo].life_span;
+    temperament = ids[dogBreedNo].temperament;
+    console.log(dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, homeSpan, temperament)
 }
+
+// FINISHED VARIABLES
+// dogBreed        Breed of dog
+// dogPic          Picture
+// dogWeight       Weight Range
+// dogHeight       Height Range
+// bredFor         What it's bred to do
+// breedingGroup   Group it breeds with children
+// lifeSpan        Expected Lifespan
+// temperament     Mannerisms
+// compBreed       List of Compatible dog breeds
+// compBreedNo     Number of compatability
