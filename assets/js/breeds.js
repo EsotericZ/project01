@@ -207,6 +207,11 @@ function dogInfo() {
     lifeSpan = ids[dogBreedNo].life_span;
     temperament = ids[dogBreedNo].temperament;
     // console.log(dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, homeSpan, temperament)
+    console.log(dogPic)
+    $("#dogBreed").append(dogBreed);
+    $("#image").attr({ src: dogPic});
+    // $("breedName").append()
+    // $(.compNum),append()
     // console.log(dogPic)
 
     // $("#image").attr({ src: dogPic });
