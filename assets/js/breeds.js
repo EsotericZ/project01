@@ -210,6 +210,7 @@ function dogInfo() {
     console.log(dogPic)
     $("#dogBreed").append(dogBreed);
     $("#image").attr({ src: dogPic});
+    $("breedName1")
     // $("breedName").append()
     // $(.compNum),append()
     // console.log(dogPic)
