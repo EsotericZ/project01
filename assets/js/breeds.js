@@ -179,14 +179,19 @@ function dogInfo() {
     console.log(dogBreedNo, dogBreed)
     // OUR DOGS INFO
     let dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, homeSpan, temperament;
-    dogPic = ids[dogBreedNo].image;
+    dogPic = ids[dogBreedNo].image.url;
     dogWeight = ids[dogBreedNo].weight.imperial;
     dogHeight = ids[dogBreedNo].height.imperial;
     bredFor = ids[dogBreedNo].bred_for;
     breedingGroup = ids[dogBreedNo].breed_group;
     lifeSpan = ids[dogBreedNo].life_span;
     temperament = ids[dogBreedNo].temperament;
-    console.log(dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, homeSpan, temperament)
+    // console.log(dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, homeSpan, temperament)
+    console.log(dogPic)
+    $("#dogBreed").append(dogBreed);
+    $("#image").attr({ src: dogPic});
+    // $("breedName").append()
+    // $(.compNum),append()
 }
 
 // FINISHED VARIABLES
