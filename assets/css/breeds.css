@@ -38,31 +38,28 @@ label {
     /* border: 1px solid #000000; */
     margin: 20px;
     padding: 10px;
+
 }
+/* #image {
+      -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+} */
 .col-lg-2{
-    border: 1px solid #000000;
-    padding:10px;
-    justify-content: center;
-}
-#doggy {
-    justify-content: center;
+  border: 1px solid #000000;
+  padding:10px;
+  justify-content: center;
 }
 #dogBreed {
     font-size: 35px;
-    margin-left: 10px 0 0 25px;
-
 }
 
-.dogInfo {
-    font-size: 20px;
-    flex-wrap: wrap;
-    margin-left: 20px;
-    justify-content: center;
-}
-#image {
-    margin: 10px 10px;
-    justify-content: center;
-}
+/* .nav-item {
+  color: black;
+} */
+
 .row {
-    font-size: 15px; 
+   font-size: 15px; 
 }
