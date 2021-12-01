@@ -216,4 +216,5 @@ function updatePage() {
     $("#lifeSpan").append(`Life Span: ${lifeSpan}`);
     $("#temperament").append(`Temperament: ${temperament}`);
     $("#bredFor").append(`Bred For: ${bredFor}`);
+    $("#compatible").empty().append("Compatible Breeds");
 }

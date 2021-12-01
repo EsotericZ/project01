@@ -14,11 +14,12 @@ a.selected {
     text-align:left;
     width:394px;
     z-index:100;
-    padding: 20px;
+    padding: 18px;
     left: 50%; 
     transform: translate(-50%, -50%); 
     font-size: 21.25px;
     color: black;
+    line-height: 25px;
 }
 
 label {
@@ -47,12 +48,9 @@ label {
     justify-content: center;
 }
 
-#doggy {
-    justify-content: center;
-}
-
 #dogBreed {
     font-size: 35px;
+    font-weight: bold;
 }
 
 .dogInfo {
@@ -74,4 +72,15 @@ label {
 #dogBreed, #dogWeight, #dogHeight, #bredFor, #breedingGroup, #lifeSpan, #temperament {
     text-align: center;
     line-height: 45px;
+}
+
+#compatible {
+    font-size: 35px;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+#bn0, #bn1, #bn2, #bn3, #bn4 {
+    font-size: 20px;
 }
