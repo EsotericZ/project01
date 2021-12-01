@@ -190,10 +190,10 @@ function dogInfo() {
 
     getApi2();
     
-    $(".container").append(`<strong>${dogBreed}</strong>`);
-    for (let i = 0; i < compBreed.length; i++) {
-        $(".container").append(`<li>${compBreed[i]}      ${compStrength[i]}</li>`);
-    }
+    // $(".container").append(`<strong>${dogBreed}</strong>`);
+    // for (let i = 0; i < compBreed.length; i++) {
+    //     $(".container").append(`<li>${compBreed[i]}      ${compStrength[i]}</li>`);
+    // }
 
     // OUR DOGS INFO
     let dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, temperament;
