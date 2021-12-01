@@ -3,7 +3,7 @@ var requestURL = "https://data.actmapi.act.gov.au/arcgis/rest/services/data_extr
 var responseText = document.getElementById('response-text');
 
 
-
+// this is the call for the API or the test 
 function getApi(requestURL) {
   fetch (requestUrl)
     .then(function (response) {
@@ -15,3 +15,13 @@ function getApi(requestURL) {
     });
 }
 getApi (requestURL);
+
+// this is the javascript from MDBootstrap for the Search button  with events
+// so we can add in an event for the zip code? not sure if this is correct -- 
+// feel free to change
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
+    searchButton.addEventListener('click', () => {
+    const inputValue = searchInput.value;
+    alert(inputValue);
+    });

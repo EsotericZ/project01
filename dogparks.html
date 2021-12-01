@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- LINKS TO CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/dogparks.css">
+<!-- MDBootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet"/>
 </head>
+
 <body>
-    <h1>Dog Parks</h1>
-    <!-- Navbar -->
+<!-- START Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-    <!-- <a class="navbar-brand" href="#">Puppy Love</a> -->
         <button
             class="navbar-toggler"
             type="button"
@@ -40,10 +41,39 @@
         </div>
         </div>
     </nav>
-<!-- Navbar -->
+<!-- END Navbar -->
+
+<!-- START main containter with instructions -->
+    <div class="container-fluid">
+        <img src=".\images\dogpark.png" class="img-fluid" id= "image" alt="dogs running in a park" />
+        <h1> Find Dog Parks Near Me</h1>
+        <h2> find dog parks near you to take your new (or old) best bud to </h2>
+    </div>
+<!-- END main containter with instructions -->
+
+<!-- START - this is the parent to the map placeholder and the search so they can be formatted side by side -->
+<div class="row">
+<!-- placeholder for where the map will display search results -->
+    <img class="col-md-6" src=".\images\4placeholder.jpg" class = "container" alt = "map results" />
+<!-- START search button for area code  -->
+        <div class="col-md-6">
+            <div class="input-group"></div>
+                <div class="form-outline">
+                <input id="search-input" type="search" id="form1" class="form-control" />
+                <label class="form-label" for="form1">Search</label>
+                </div>
+                <button id="search-button" type="button" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+<!-- END search button for area code  -->
+</div>
+<!-- END parent-->
+
+<!-- JAVASCRIPT LINKS -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <!-- MDB -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js"></script>
     <script type="text/javascript" src="./assets/js/dogParks.js"></script>
 </body>
+
 </html>
