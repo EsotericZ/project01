@@ -71,3 +71,8 @@ label {
 .row {
     font-size: 15px; 
 }
+
+#dogBreed, #dogWeight, #dogHeight, #bredFor, #breedingGroup, #lifeSpan, #temperament {
+    text-align: center;
+    line-height: 45px;
+}
