@@ -1,6 +1,6 @@
 // * * * VARIABLES * * * //
 let dogBreed, dogBreedNo, cmp1, cmpNo1, cmp2, cmpNo2, cmp3, cmpNo3, cmp4, cmpNo4, cmp5, cmpNo5, cmpL, cmpNoL;
-let dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, temperament;
+let dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, temperament;
 let dogBreedPic;
 let ids, ids2;
 let requestUrl = 'https://api.thedogapi.com/v1/breeds/';
@@ -210,7 +210,6 @@ function dogInfo() {
 
 function updatePage() {
     $("#dogBreed").append(dogBreed);
-    $("#image").attr({ src: dogPic});
     $("#dogWeight").append(`Weight Range (lbs): ${dogWeight}`);
     $("#dogHeight").append(`Height Range (in): ${dogHeight}`);
     $("#breedingGroup").append(`Breed Group ${breedingGroup}`);
