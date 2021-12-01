@@ -25,3 +25,12 @@ getApi (requestURL);
     const inputValue = searchInput.value;
     alert(inputValue);
     });
+
+
+// GENERAL PSEUDO CODE FOR JS - SUBJECT TO CHANGE 
+// 1. get the api to work
+// 2. be able to  filter the api/map for dog parks by zip code
+// 3. make the search button display only results for the zipcode selected
+// 3.a. make sure that the search bar text field deletes the default code when we type 
+//      in the search parameters 
+// 4. be able to favorite park and save to local storage 
