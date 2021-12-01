@@ -9,8 +9,6 @@ Project 01
 ## Acceptance Criteria
 
 * It's done when the user clicks on the Dog Parks webpage and list of dog parks populates
-<!-- If user account has zipcode, can pull user zipcode to populate dog parks nearby -->
-<!-- otherwise, input zipcode (or use current location?) -->
 
 * It's done when 
 
