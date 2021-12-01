@@ -1,20 +1,27 @@
-// Create a request variable and assign a new XMLHttpRequest object to it.
-var requestURL = "https://data.actmapi.act.gov.au/arcgis/rest/services/data_extract/Community_Facilities_and_Assets/MapServer/5/query?where=1%3D1&outFields=*&outSR=4326&f=json"
-var responseText = document.getElementById('response-text');
+fetch('https://data.actmapi.act.gov.au/arcgis/rest/services/data_extract/Community_Facilities_and_Assets/MapServer/5/query?where=1%3D1&outFields=*&outSR=4326&f=json', {
+  method: 'GET', //GET is the default.
+  credentials: 'same-origin', // include, *same-origin, omit
+  redirect: 'follow', // manual, *follow, error
+})
+  .then(function (response) {
+    console.log(response);
+    // var features = response.features[4];
+
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+        for (let i = 0; i < data.features.length; i++) {
+        console.log(data.features[i]);
+        };
+  });
+
+// api that takes in parameter of city or zipcode 
+// click on submit - save as variable, pass the variable as a query parameter
+
+// see how or if it lets you use zip/city parameters (with current api or new api)
 
 
-// this is the call for the API or the test 
-function getApi(requestURL) {
-  fetch (requestUrl)
-    .then(function (response) {
-      console.log(response);
-      if (response.status === 200) {
-        let ids = response.json();
-        console.log(ids);
-          // return response.json();
-    });
-}
-getApi (requestURL);
 
 // this is the javascript from MDBootstrap for the Search button  with events
 // so we can add in an event for the zip code? not sure if this is correct -- 
