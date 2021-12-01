@@ -1,3 +1,15 @@
+// * * * VARIABLES * * * //
+let dogBreed, dogBreedNo, cmp1, cmpNo1, cmp2, cmpNo2, cmp3, cmpNo3, cmp4, cmpNo4, cmp5, cmpNo5, cmpL, cmpNoL;
+let dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, temperament;
+let dogBreedPic;
+let ids, ids2;
+let requestUrl = 'https://api.thedogapi.com/v1/breeds/';
+let compBreedNo = [];
+let compStrength = [];
+let compBreed = [];
+let compBreedPic = [];
+
+
 let allBreeds = [
     ["Cocker Spaniel", 86, 121, 9, 127, 9, 149, 9, 30, 8, 50, 8, 15, 1, 'spaniel'],
     ["Basset Hound", 30, 31, 8, 50, 8, 127, 8, 53, 7, 168, 7, 92, 1, 'hound'],
@@ -26,46 +38,9 @@ let allBreeds = [
     ["Yorkshire Terrier", 264, 77, 9, 50, 8, 168, 8, 30, 7, 31, 7, 15, 1, 'terrier']
 ];
 
-let requestUrl = 'https://api.thedogapi.com/v1/breeds/';
 
-let ids, ids2;
 
-function getApi(requestUrl) {
-    fetch(requestUrl)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            ids = data;
-        });
-}
-
-let dogBreedPic;
-
-function getApi2() {
-    fetch(`https://dog.ceo/api/breed/${dogBreedPic}/images/random`)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            $("#image").attr({ src: data.message });
-        });
-    
-    for (let i = 0; i < compBreedPic.length; i++) {
-        fetch(`https://dog.ceo/api/breed/${compBreedPic[i]}/images/random`)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                $("#img"+[i]).attr({ src: data.message });
-            });
-        console.log(compBreed[i])
-        $("#bn"+[i]).append(compBreed[i]);
-    }
-}
-
-getApi(requestUrl);
-
+// * * * PAGE LOAD CONTROLS * * * //
 $(document).ready(function() {
     BindControls();
 });
@@ -115,8 +90,6 @@ function deselect(e) {
     });
 }
 
-let dogBreed, dogBreedNo, cmp1, cmpNo1, cmp2, cmpNo2, cmp3, cmpNo3, cmp4, cmpNo4, cmp5, cmpNo5, cmpL, cmpNoL;
-
 $(function() {
     window.onload = function() {
         if($(this).hasClass('selected')) {
@@ -138,7 +111,6 @@ $(function() {
         }
         dogInfo();
         deselect($(this));
-        // getApi2();
         return false;
     })
 
@@ -152,11 +124,48 @@ $.fn.slideFadeToggle = function(easing, callback) {
     return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
 };
 
-let compBreedNo = [];
-let compStrength = [];
-let compBreed = [];
-let compBreedPic = [];
 
+
+// * * * FUNCTIONS * * * //
+getApi(requestUrl);
+// GET DOG BREED INFORMATION
+function getApi(requestUrl) {
+    fetch(requestUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            ids = data;
+        });
+}
+
+// GET DOG BREED PICTURES
+function getApi2() {
+    fetch(`https://dog.ceo/api/breed/${dogBreedPic}/images/random`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            $("#image").attr({ src: data.message });
+        });
+    
+    for (let i = 0; i < compBreedPic.length; i++) {
+        fetch(`https://dog.ceo/api/breed/${compBreedPic[i]}/images/random`)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                $("#img"+[i]).attr({ src: data.message });
+            });
+        $("#bn"+[i]).append(compBreed[i]);
+    }
+
+    setTimeout( function() { 
+        updatePage()
+    }, 1000);
+}
+
+// COLLECT ALL DOG INFO
 function dogInfo() {
     for (let i = 0; i < allBreeds.length; i++) {
         if (allBreeds[i][0] === dogBreed) {
@@ -190,39 +199,22 @@ function dogInfo() {
 
     getApi2();
     
-    // $(".container").append(`<strong>${dogBreed}</strong>`);
-    // for (let i = 0; i < compBreed.length; i++) {
-    //     $(".container").append(`<li>${compBreed[i]}      ${compStrength[i]}</li>`);
-    // }
-
     // OUR DOGS INFO
-    let dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, temperament;
     dogWeight = ids[dogBreedNo].weight.imperial;
     dogHeight = ids[dogBreedNo].height.imperial;
     bredFor = ids[dogBreedNo].bred_for;
     breedingGroup = ids[dogBreedNo].breed_group;
     lifeSpan = ids[dogBreedNo].life_span;
     temperament = ids[dogBreedNo].temperament;
-    // console.log(dogPic, dogWeight, dogHeight, bredFor, breedingGroup, lifeSpan, temperament)
-
-    $("#dogBreed").append(dogBreed);
-    $("#image").attr({ src: dogPic});
-    $("#dogWeight").append(dogWeight);
-    $("#dogHeight").append(dogHeight);
-    $("#breedingGroup").append(breedingGroup);
-    $("#lifeSpan").append(lifeSpan);
-    $("#temperament").append(temperament);
-    $("#bredFor").append(bredFor);
 }
 
-// FINISHED VARIABLES
-// dogBreed        Breed of dog
-// dogPic          Picture
-// dogWeight       Weight Range
-// dogHeight       Height Range
-// bredFor         What it's bred to do
-// breedingGroup   Group it breeds with children
-// lifeSpan        Expected Lifespan
-// temperament     Mannerisms
-// compBreed       List of Compatible dog breeds
-// compBreedNo     Number of compatability
+function updatePage() {
+    $("#dogBreed").append(dogBreed);
+    $("#image").attr({ src: dogPic});
+    $("#dogWeight").append(`Weight Range (lbs): ${dogWeight}`);
+    $("#dogHeight").append(`Height Range (in): ${dogHeight}`);
+    $("#breedingGroup").append(`Breed Group ${breedingGroup}`);
+    $("#lifeSpan").append(`Life Span: ${lifeSpan}`);
+    $("#temperament").append(`Temperament: ${temperament}`);
+    $("#bredFor").append(`Bred For: ${bredFor}`);
+}
