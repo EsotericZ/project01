@@ -52,22 +52,25 @@
 <!-- END main containter with instructions -->
 
 <!-- START - this is the parent to the map placeholder and the search so they can be formatted side by side -->
-<div class="row">
+<div class="container-fluid">
+    <div class="row">
 <!-- placeholder for where the map will display search results -->
-    <img class="col-md-6" src=".\images\4placeholder.jpg" class = "container" alt = "map results" />
-<!-- START search button for area code  -->
-        <div class="col-md-6">
-            <div class="input-group"></div>
-                <div class="form-outline">
-                <input id="search-input" type="search" id="form1" class="form-control" />
-                <label class="form-label" for="form1">Search</label>
-                </div>
-                <button id="search-button" type="button" class="btn btn-primary">
-                <i class="fas fa-search"></i>
-                </button>
+        <img class="col-md-6" id="map" src=".\images\Placeholder Image.jpg" class = "container" alt = "map results" />
+<!-- START pop up selector  -->
+            <div class="messagepop pop" class="col-md-6" id="search">
+                <form method="post" id="new_message" action="/messages">
+                    <p>
+                        <label for="email">Choose Suburb</label>
+                        <input type="text" id="suburbz" />
+                    </p>
+                    <p>
+                        <a class="message_submit" href="/">Submit</a>
+                        <a class="close" href="/">Cancel</a>
+                    </p>
+                </form>
             </div>
-        </div>
-<!-- END search button for area code  -->
+<!-- END pop up selector  -->
+    </div>
 </div>
 <!-- END parent-->
 
