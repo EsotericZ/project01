@@ -59,6 +59,25 @@ $('suburbz').autocomplete({
 }
 
 // * * * FUNCTIONS * * * //
+
+
+// ~~~~~~~~~~~~~   KAI AND ERNA   ~~~~~~~~~~~~~~~~~~//
+// THIS IS FOR DOG PARKS IN RALEIGH NC - HAS ADDY, STATUS, HOURS, BATHROOM, DOG FOUNTAIN, ETC
+// NOT A LOT OF PARKS BUT CAN USE TO SHOW WHAT WE ARE LOOKING FOR AND SAY MOVING FORWARD EXPAND ACROSS US? 
+getApi();
+
+function getApi() {
+    fetch('https://services.arcgis.com/v400IkDOw1ad7Yad/arcgis/rest/services/DogParkLocations_Existing_PUBLIC/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log("new", data);
+        });
+}
+// ~~~~~~~~~~~~~   KAI AND ERNA   ~~~~~~~~~~~~~~~~~~//
+
+
 fetch('https://data.actmapi.act.gov.au/arcgis/rest/services/data_extract/Community_Facilities_and_Assets/MapServer/5/query?where=1%3D1&outFields=*&outSR=4326&f=json', {
   method: 'GET', //GET is the default.
   credentials: 'same-origin', // include, *same-origin, omit
@@ -71,7 +90,7 @@ fetch('https://data.actmapi.act.gov.au/arcgis/rest/services/data_extract/Communi
     return response.json();
   })
   .then(function (data) {
-    console.log(data);
+    console.log('d', data);
         for (let i = 0; i < data.features.length; i++) {
         console.log(data.features[i]);
         };
