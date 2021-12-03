@@ -225,4 +225,5 @@ function updatePage() {
     $("#bredFor").append(`Bred For: ${bredFor}`);
     $("#bredi").attr("class", "fas fa-bone");
     $("#compatible").empty().append("Compatible Breeds");
+    $("#hr-line").attr("class", "hr-line");
 }

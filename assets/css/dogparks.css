@@ -1,0 +1,18 @@
+:root {
+    --black: black;
+    --darkest: rgb(180, 78, 9);
+    --dark: rgb(150, 102, 40);
+    --medium: rgb(179, 139, 83);
+    --light: rgb(224, 199, 165);
+    --accent: rgb(243, 147, 92);
+    --white: white;
+}
+
+i {
+    padding: 10px;
+}
+
+.nav-item {
+    padding-left: 50px;
+    padding-right: 50px;
+}

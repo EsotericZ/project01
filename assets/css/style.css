@@ -29,10 +29,10 @@ body {
 }
 
 .nav-item {
-    color: black;
     padding-left: 50px;
     padding-right: 50px;
 }
+
 #dogBreed {
     font-size: 30px;
     color: black;
@@ -41,4 +41,8 @@ body {
 
 .img-fluid {
     height: 90%;
+}
+
+i {
+    padding: 10px;
 }
