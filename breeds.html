@@ -3,22 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- <link type="css" rel="stylesheet" href="src/node_modules/bootstrap/dist/css/bootstrap.css" crossorigin="anonymous"> -->
-        <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-            crossorigin="anonymous"
-        />
         <link rel="stylesheet" href="assets/css/mdb.min.css" />
-        <link rel="stylesheet" href="./assets/css/breeds.css" />
+        <link rel="stylesheet" href="./assets/css/breeds.css">
         <title>Puppy Love</title>
     </head>
 <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Puppy Love</a> -->
         <button
             class="navbar-toggler"
             type="button"
@@ -28,20 +21,21 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
         >
+            <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html"><i class="fas fa-dog"></i>Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="breeds.html"><i class="fas fa-dog"></i>Breeds</a>
+                    <a class="nav-link" href="breeds.html">Breeds</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="dogparks.html"><i class="fas fa-dog"></i>Dog Parks</a>
+                    <a class="nav-link" href="dogparks.html">Dog Parks</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="calendar.html"><i class="fas fa-dog"></i>Calendar</a>
+                    <a class="nav-link" href="calendar.html">Calendar</a>
                 </li>
             </ul>
         </div>
@@ -50,30 +44,30 @@
 <!-- Navbar -->
     <body>
         <!-- POP-UP SELECTOR -->
-        <div class="messagepop pop" id="msg">
+        <div class="messagepop pop">
             <form method="post" id="new_message" action="/messages">
                 <p>
                     <label for="email">Choose Dog Breed</label>
                     <input type="text" id="tbBreeds" />
                 </p>
-                <p class="messageOptions" id="msgopt">
-                    <a class="message_submit" id="message_submit" href="/">Submit</a>
-                    <a class="message_submit" id="close" href="/">Cancel</a>
+                <p>
+                    <a class="message_submit" href="/">Submit</a>
+                    <a class="close" href="/">Cancel</a>
                 </p>
             </form>
         </div>
 
         <!-- OUR DOG BREED -->
         <div class="container-fluid">
-            <div class="row" id="topRow">
+            <div class="row">
                 <div class="col-7 justify-content-center">
-                    <div class="dogInfo" id="dogBreed"><i id="dogBi"></i></div>
-                    <div class="dogInfo" id="dogWeight"><i id="dogWi"></i></div>
-                    <div class="dogInfo" id="dogHeight"><i id="dogHi"></i></div>
-                    <div class="dogInfo" id="bredFor"><i id="bredi"></i></div>
-                    <div class="dogInfo" id="breedingGroup"><i id="breedi"></i></div>
-                    <div class="dogInfo" id="lifeSpan"><i id="lifeSi"></i></div>
-                    <div class="dogInfo" id="temperament"><i id="tempi"></i></div>
+                    <div class="dogInfo" id="dogBreed"></div>
+                    <div class="dogInfo" id="dogWeight"></div>
+                    <div class="dogInfo" id="dogHeight"></div>
+                    <div class="dogInfo" id="bredFor"></div>
+                    <div class="dogInfo" id="breedingGroup"></div>
+                    <div class="dogInfo" id="lifeSpan"></div>
+                    <div class="dogInfo" id="temperament"></div>
                 </div>
 
                 <div class="col-5 justify-content-center">
@@ -84,34 +78,32 @@
 
         <!-- COMPATIBLE DOGS -->
         <div class="container-fluid">
-
-            <div class="row" id="compatible"></div>
-
+            <div class="row" id="compatible"> Compatible Breeds </div>
             <div class="row gx-2 justify-content-center">
 
                 <div class="col-lg-2 col-md-12"> 
                     <img class="img-fluid" id="img0"/>
-                    <p id="bn0"><i id="i0"></i></p>
+                    <p id="bn0"></p>
                 </div>
 
                 <div class="col-lg-2 col-md-6">
                     <img class="img-fluid" id= "img1"/>
-                    <p id="bn1"><i id="i1"></i></p>
+                    <p id="bn1"></p>
                 </div>
 
                 <div class="col-lg-2 col-md-6">
                     <img class="img-fluid" id= "img2"/>
-                    <p id="bn2"><i id="i2"></i></p>
+                    <p id="bn2"></p>
                 </div>
 
                 <div class="col-lg-2 col-md-6">
                     <img class="img-fluid" id= "img3"/>
-                    <p id="bn3"><i id="i3"></i></p>
+                    <p id="bn3"></p>
                 </div>
 
                 <div class="col-lg-2 col-md-6">
                     <img class="img-fluid" id= "img4"/>
-                    <p id="bn4"><i id="i4"></i></p>
+                    <p id="bn4"></p>
                 </div>
             </div>
         </div>
