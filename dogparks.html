@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- LINKS TO CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/dogparks.css">
+<!-- MDBootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet"/>
 </head>
+
 <body>
-    <h1>Dog Parks</h1>
-    <!-- Navbar -->
+<!-- START Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-    <!-- <a class="navbar-brand" href="#">Puppy Love</a> -->
         <button
             class="navbar-toggler"
             type="button"
@@ -40,10 +41,62 @@
         </div>
         </div>
     </nav>
-<!-- Navbar -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <!-- MDB -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js"></script>
+<!-- END Navbar -->
+
+<!-- START main containter with instructions -->
+<div
+  class="p-5 text-center bg-image rounded-3"
+  style="
+    background-image: url('./images/dogpark.png');
+    height: 400px;
+">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Take your new (or old) best bud to the park of their dreams</h1>
+        <a class="btn btn-outline-light btn-lg" href="#map" role="button">Find Dog Parks Near You</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END main containter with instructions -->
+
+<!-- START - this is the parent to the map placeholder and the search so they can be formatted side by side -->
+<div class="container-fluid">
+    <div class="row">
+<!-- placeholder for where the map will display search results -->
+        <img class="col-md-6" id="map" src=".\images\Placeholder Image.jpg" class = "container" alt = "map results" />
+<!-- START pop up selector  -->
+            <div class="messagepop pop col-md-6" id="search">
+                <form method="post" id="new_message" action="/messages">
+                    <p>
+                        <label for="email">Choose Suburb</label>
+                        <input type="text" id="suburbz" />
+                    </p>
+                    <p>
+                        <a class="message_submit" href="/">Submit</a>
+                        <a class="close" href="/">Cancel</a>
+                    </p>
+                </form>
+            </div>
+<!-- END pop up selector  -->
+    </div>
+</div>
+<!-- END parent-->
+
+<!-- JAVASCRIPT LINKS -->
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./assets/js/dogParks.js"></script>
 </body>
+
 </html>
+
+
+<!-- TO DO HTML/CSS // PSEUDO CODE -->
+    <!-- 1. need to fix formatting to look like wireframe--> 
+        <!-- 1. a. make the photos if the dog span across the entire page  -->
+        <!-- 1. b. make text overlap the photo -->
+        <!-- 1. c. right now the placeholder image for the map is way too big 
+            make this smaller if possible , but it may fix itself once we get the js working -->
