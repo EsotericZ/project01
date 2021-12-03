@@ -134,7 +134,6 @@ i {
     justify-content: center;
     font-weight: bold;
     line-height: 60px;
-    /* padding-top: 50px; */
 }
 
 #bn0, #bn1, #bn2, #bn3, #bn4 {
@@ -149,4 +148,13 @@ p {
     text-align: center;
     padding-top: 20px;
     font-weight: bold;
+}
+
+div.hr-line {
+    position: relative;
+    display: inline-block;
+    width: 74%;
+    margin-left: 13%;
+    margin-right: 13%;
+    border: 1px solid black;
 }
