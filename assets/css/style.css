@@ -38,3 +38,7 @@ body {
     color: black;
     padding: 10px;
 }
+
+.img-fluid {
+    height: 90%;
+}
