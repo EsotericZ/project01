@@ -44,11 +44,21 @@
 <!-- END Navbar -->
 
 <!-- START main containter with instructions -->
-    <div class="container-fluid">
-        <img src=".\images\dogpark.png" class="img-fluid" id= "image" alt="dogs running in a park" />
-        <h1> Find Dog Parks Near Me</h1>
-        <h2> find dog parks near you to take your new (or old) best bud to </h2>
+<div
+  class="p-5 text-center bg-image rounded-3"
+  style="
+    background-image: url('./images/dogpark.png');
+    height: 400px;
+">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Take your new (or old) best bud to the park of their dreams</h1>
+        <a class="btn btn-outline-light btn-lg" href="#map" role="button">Find Dog Parks Near You</a>
+      </div>
     </div>
+  </div>
+</div>
 <!-- END main containter with instructions -->
 
 <!-- START - this is the parent to the map placeholder and the search so they can be formatted side by side -->
@@ -57,7 +67,7 @@
 <!-- placeholder for where the map will display search results -->
         <img class="col-md-6" id="map" src=".\images\Placeholder Image.jpg" class = "container" alt = "map results" />
 <!-- START pop up selector  -->
-            <div class="messagepop pop" class="col-md-6" id="search">
+            <div class="messagepop pop col-md-6" id="search">
                 <form method="post" id="new_message" action="/messages">
                     <p>
                         <label for="email">Choose Suburb</label>
