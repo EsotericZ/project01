@@ -42,3 +42,12 @@ body {
 .img-fluid {
     height: 90%;
 }
+
+div.class {
+    background-color: white;
+}
+
+#fas {
+    padding-left: 10px;
+
+}
