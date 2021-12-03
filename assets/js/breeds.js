@@ -138,7 +138,7 @@ function getApi(requestUrl) {
             ids = data;
         });
 }
-
+console.log (rottweiler)
 // GET DOG BREED PICTURES
 function getApi2() {
     fetch(`https://dog.ceo/api/breed/${dogBreedPic}/images/random`)
