@@ -10,7 +10,7 @@ function getApi() {
   fetch('https://services.arcgis.com/v400IkDOw1ad7Yad/arcgis/rest/services/DogParkLocations_Existing_PUBLIC/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
     .then(function (response) {
       return response.json();
-      console.log(response);
+     
     })
     .then(function (data) {
       console.log(data.features);
@@ -23,7 +23,7 @@ function getApi() {
 
       console.log(sites);
 
-// * * * PAGE LOAD CONTROLS * * * // 
+// // * * * PAGE LOAD CONTROLS * * * // 
       $('suburbz').autocomplete({
         source: sites,
         minLength: 0,
@@ -62,16 +62,6 @@ function getApi() {
 // see how or if it lets you use zip/city parameters (with current api or new api)
 
 
-
-// this is the javascript from MDBootstrap for the Search button  with events
-// so we can add in an event for the zip code? not sure if this is correct -- 
-// feel free to change
-const searchButton = document.getElementById('search-button');
-const searchInput = document.getElementById('search-input');
-searchButton.addEventListener('click', () => {
-  const inputValue = searchInput.value;
-  alert(inputValue);
-});
 
 
 // GENERAL PSEUDO CODE FOR JS - SUBJECT TO CHANGE 
