@@ -101,7 +101,7 @@ $(function() {
       return false;
     };
   
-    $('.message_submit').on('click', function() {
+    $('#message_submit').on('click', function() {
         dogBreed = $('#tbBreeds').val();
         for (let i = 0; i < allBreeds.length; i++) {
             if (allBreeds[i][0] === dogBreed) {
@@ -114,7 +114,7 @@ $(function() {
         return false;
     })
 
-    $('.close').on('click', function() {
+    $('#close').on('click', function() {
         window.location.replace("index.html");
         return false;
     });

@@ -3,15 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- <link type="css" rel="stylesheet" href="src/node_modules/bootstrap/dist/css/bootstrap.css" crossorigin="anonymous"> -->
+        <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+        />
         <link rel="stylesheet" href="assets/css/mdb.min.css" />
-        <link rel="stylesheet" href="./assets/css/breeds.css">
+        <link rel="stylesheet" href="./assets/css/breeds.css" />
         <title>Puppy Love</title>
     </head>
 <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-    <!-- <a class="navbar-brand" href="#">Puppy Love</a> -->
         <button
             class="navbar-toggler"
             type="button"
@@ -21,21 +28,20 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
         >
-            <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="index.html"><i class="fas fa-dog"></i>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="breeds.html">Breeds</a>
+                    <a class="nav-link" href="breeds.html"><i class="fas fa-dog"></i>Breeds</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="dogparks.html">Dog Parks</a>
+                    <a class="nav-link" href="dogparks.html"><i class="fas fa-dog"></i>Dog Parks</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="calendar.html">Calendar</a>
+                    <a class="nav-link" href="calendar.html"><i class="fas fa-dog"></i>Calendar</a>
                 </li>
             </ul>
         </div>
@@ -44,15 +50,15 @@
 <!-- Navbar -->
     <body>
         <!-- POP-UP SELECTOR -->
-        <div class="messagepop pop">
+        <div class="messagepop pop" id="msg">
             <form method="post" id="new_message" action="/messages">
                 <p>
                     <label for="email">Choose Dog Breed</label>
                     <input type="text" id="tbBreeds" />
                 </p>
-                <p>
-                    <a class="message_submit" href="/">Submit</a>
-                    <a class="close" href="/">Cancel</a>
+                <p class="messageOptions" id="msgopt">
+                    <a class="message_submit" id="message_submit" href="/">Submit</a>
+                    <a class="message_submit" id="close" href="/">Cancel</a>
                 </p>
             </form>
         </div>
