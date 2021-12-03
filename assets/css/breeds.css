@@ -104,7 +104,8 @@ i {
 }
 
 #img0, #img1, #img2, #img3, #img4 {
-    justify-content: center;
+    display: block;
+    margin: auto;
     border-radius: 15px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     max-height: 200px;
