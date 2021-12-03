@@ -158,6 +158,7 @@ function getApi2() {
                 $("#img"+[i]).attr({ src: data.message });
             });
         $("#bn"+[i]).append(compBreed[i]);
+        $("#i"+[i]).attr("class", "fas fa-paw");
     }
 
     setTimeout( function() { 
@@ -210,11 +211,18 @@ function dogInfo() {
 
 function updatePage() {
     $("#dogBreed").append(dogBreed);
+    $("#dogBi").attr("class", "fas fa-paw");
     $("#dogWeight").append(`Weight Range (lbs): ${dogWeight}`);
+    $("#dogWi").attr("class", "fas fa-bone");
     $("#dogHeight").append(`Height Range (in): ${dogHeight}`);
+    $("#dogHi").attr("class", "fas fa-bone");
     $("#breedingGroup").append(`Breed Group ${breedingGroup}`);
+    $("#breedi").attr("class", "fas fa-bone");
     $("#lifeSpan").append(`Life Span: ${lifeSpan}`);
+    $("#lifeSi").attr("class", "fas fa-bone");
     $("#temperament").append(`Temperament: ${temperament}`);
+    $("#tempi").attr("class", "fas fa-bone");
     $("#bredFor").append(`Bred For: ${bredFor}`);
+    $("#bredi").attr("class", "fas fa-bone");
     $("#compatible").empty().append("Compatible Breeds");
 }
