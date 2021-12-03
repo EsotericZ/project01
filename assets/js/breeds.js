@@ -156,8 +156,11 @@ function getApi2() {
             .then(function (data) {
                 $("#img"+[i]).attr({ src: data.message });
             });
+        console.log(compStrength[i])
         $("#bn"+[i]).append(compBreed[i]);
         $("#i"+[i]).attr("class", "fas fa-paw");
+        $("#cr"+[i]).append(compStrength[i]);
+        $("#cr"+[i]).attr("class", "compRate");
     }
 
     setTimeout( function() { 
