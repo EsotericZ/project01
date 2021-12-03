@@ -67,18 +67,22 @@
 <!-- placeholder for where the map will display search results -->
         <img class="col-md-6" id="map" src=".\images\Placeholder Image.jpg" class = "container" alt = "map results" />
 <!-- START pop up selector  -->
-            <div class="messagepop pop col-md-6" id="search">
-                <form method="post" id="new_message" action="/messages">
-                    <p>
-                        <label for="email">Choose Suburb</label>
-                        <input type="text" id="suburbz" />
-                    </p>
-                    <p>
-                        <a class="message_submit" href="/">Submit</a>
-                        <a class="close" href="/">Cancel</a>
-                    </p>
-                </form>
-            </div>
+    <div class="dropdown col-md-6">
+        <button
+        class="btn btn-primary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-mdb-toggle="dropdown"
+        aria-expanded="false"
+        >
+        Select a Park
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
 <!-- END pop up selector  -->
     </div>
 </div>
@@ -92,11 +96,3 @@
 </body>
 
 </html>
-
-
-<!-- TO DO HTML/CSS // PSEUDO CODE -->
-    <!-- 1. need to fix formatting to look like wireframe--> 
-        <!-- 1. a. make the photos if the dog span across the entire page  -->
-        <!-- 1. b. make text overlap the photo -->
-        <!-- 1. c. right now the placeholder image for the map is way too big 
-            make this smaller if possible , but it may fix itself once we get the js working -->
