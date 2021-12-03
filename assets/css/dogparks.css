@@ -16,3 +16,8 @@ i {
     padding-left: 50px;
     padding-right: 50px;
 }
+},
+
+body {
+    background-color: var(--light);
+},

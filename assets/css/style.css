@@ -43,6 +43,15 @@ body {
     height: 90%;
 }
 
+
 i {
     padding: 10px;
+}
+div.class {
+    background-color: white;
+}
+
+#fas {
+    padding-left: 10px;
+
 }
