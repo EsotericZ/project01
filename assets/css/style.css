@@ -14,7 +14,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, var(--light), var(--dark), var(--accent), var(--darkest));
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
 }
@@ -46,8 +46,13 @@ body {
     
 }
 
-#i1, #i2, #i3, #i4 {
-    color:hotpink;
+#i1, #i4 {
+    color: var(--medium);
+    -webkit-text-stroke: 2px black;
+}
+
+#i2, #i3 {
+    color: var(--accent);
     -webkit-text-stroke: 2px black;
 }
 

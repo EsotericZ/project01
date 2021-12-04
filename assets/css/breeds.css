@@ -8,8 +8,31 @@
     --white: white;
 }
 
-body {
+/* body {
     background-color: var(--light);
+} */
+
+html, body {
+    width: 100%;
+    height:100%;
+}
+
+body {
+    background: linear-gradient(-45deg, var(--light), var(--dark), var(--accent), var(--darkest));
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 a.selected {
@@ -20,7 +43,7 @@ a.selected {
 
 .messagepop {
     background-color: var(--medium);
-    border:1px solid #999999;
+    border:1px solid var(--light);
     cursor:default;
     display:none;
     margin-top: 150px;
