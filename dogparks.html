@@ -54,28 +54,31 @@
     </div>
     <!-- END main containter with instructions -->
 
-    <!-- START - this is the parent to the map placeholder and the search so they can be formatted side by side -->
-    <div class="container-fluid">
-        <div class="row">
-            <!-- placeholder for where the map will display search results -->
-            <img class="col-md-6" id="map" src=".\images\Placeholder Image.jpg" class="container" alt="map results" />
-            <!-- START pop up selector  -->
-            <div class="dropdown col-md-6">
-                <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-mdb-toggle="dropdown" aria-expanded="false">
-                    Select A Park!
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Millbrook-Exchange Dog Park</a></li>
-                    <li><a class="dropdown-item" href="#">Buffaloe Road Dog Park</a></li>
-                    <li><a class="dropdown-item" href="#">Oakwood Dog Park</a></li>
-                    <li><a class="dropdown-item" href="#">OJaycee Dog Run</a></li>
-                    <li><a class="dropdown-item" href="#">Carolina Pines Dog Park</a></li>
-                    <li><a class="dropdown-item" href="#">Kiwanis Dog Run</a></li>
-                    <li><a class="dropdown-item" href="#">Temporary Dorothea Dix Dog Park</a></li>
-                </ul>
-            </div>
-            <!-- END pop up selector  -->
+<!-- START - this is the parent to the map placeholder and the search so they can be formatted side by side -->
+<div class="container-fluid">
+    <div class="row">
+<!-- placeholder for where the map will display search results -->
+        <img class="col-md-6" id="map" src=".\images\Placeholder Image.jpg" class = "container" alt = "map results" />
+<!-- START pop up selector  -->
+        <div class="dropdown col-md-6">
+            <button
+            class="btn btn-warning dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+            >
+            Select A Park! 
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" id="millbrook">Millbrook-Exchange Dog Park</a></li>
+            <li><a class="dropdown-item" id="buffaloe">Buffaloe Road Dog Park</a></li>
+            <li><a class="dropdown-item" id="oakwood">Oakwood Dog Park</a></li>
+            <li><a class="dropdown-item" id="ojaycee">OJaycee Dog Run</a></li>
+            <li><a class="dropdown-item" id="carolina">Carolina Pines Dog Park</a></li>
+            <li><a class="dropdown-item" id="kiwanis">Kiwanis Dog Run</a></li>
+            <li><a class="dropdown-item" id="temporary">Temporary Dorothea Dix Dog Park</a></li>
+            </ul>
         </div>
     </div>
     <!-- END parent-->

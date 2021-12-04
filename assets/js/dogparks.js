@@ -1,9 +1,5 @@
 // * * * FUNCTIONS * * * //
 
-
-// ~~~~~~~~~~~~~   KAI AND ERNA   ~~~~~~~~~~~~~~~~~~//
-// THIS IS FOR DOG PARKS IN RALEIGH NC - HAS ADDY, STATUS, HOURS, BATHROOM, DOG FOUNTAIN, ETC
-// NOT A LOT OF PARKS BUT CAN USE TO SHOW WHAT WE ARE LOOKING FOR AND SAY MOVING FORWARD EXPAND ACROSS US? 
 getApi();
 
 function getApi() {
@@ -33,19 +29,20 @@ function getApi() {
 
       console.log(sites);
 
-// // * * * PAGE LOAD CONTROLS * * * // 
-      $('suburbz').autocomplete({
-        source: sites,
-        minLength: 0,
-        scroll: true
-      });
-    });
+// // // * * * PAGE LOAD CONTROLS * * * // 
+//     //   $('suburbz').autocomplete({
+//     //     source: sites,
+//     //     minLength: 0,
+//     //     scroll: true
+//     //   });
+//     // });
+  });
 }
-
 
 
 // GENERAL PSEUDO CODE FOR JS - SUBJECT TO CHANGE 
 // 1. get the api to work +  filter for parameters we want to show - DONE 
-// 2. get api info to display on page
-// 3. be able to select which park we would like to display using the dropdown selecter  
-// 4. be able to favorite park and save to local storage 
+// 2. be able to select which park we would like to display information using the dropdown selecter 
+// 3. get api info to display on page 
+// 4. get google api to associate with each park and diplay that onto the page
+// 5. be able to favorite park and save to local storage
