@@ -227,3 +227,34 @@ function updatePage() {
     $("#compatible").empty().append("Compatible Breeds");
     $("#hr-line").attr("class", "hr-line");
 }
+
+//localStorage
+$('.saveBtn').click(function() {
+    if (localStorage.getItem('dataStorage')!== null){
+        dataStorage = JSON.parse(localStorage.getItem('dataStorage'));
+    }
+    let time = $(this).parent().children()[0].innerHTML;
+    console.log(time);
+
+    let storage = {times: time, text: text};
+    console.log(storage);
+    dataStorage.push(storage);
+    console.log(dataStorage);
+    localStorage.setItem("dataStorage", JSON.stringify(dataStorage));
+})
+let dataStorage = [];
+let storedData = JSON.parse(localStorage.getItem("dataStorage"));
+console.log(storedData);
+storedData.forEach(element => {
+    console.log(element)
+    let checkTime = element.times;
+    let checkMsg = element.text;
+    console.log(checkTime, checkMsg)
+    for (let i = 1; i < 10; i++) {
+        console.log('i', i)
+        let checkId = $(`#${i}`).parent().children()[0].innerHTML;
+        if (checkTime == checkId) {
+            $(`#${i}`).parent().children()[1].textContent = checkMsg;
+        }
+    }
+});
