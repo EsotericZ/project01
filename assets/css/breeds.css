@@ -200,3 +200,20 @@ div.hr-line {
     color: black;
     border: solid 1px var(--darkest);
 }
+
+.hidden1, .hidden2 {
+    display: none;
+    opacity: 0;
+}
+
+.fav, .redo {
+    background-color: red;
+    border-radius: 5px;
+    color: black;
+    display: grid;
+    font-size: 17px;
+    margin: 15px;
+    text-align: center;
+    cursor: pointer;
+    width: 250px;
+}
