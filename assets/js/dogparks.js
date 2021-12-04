@@ -18,6 +18,16 @@ function getApi() {
         return {
           site: feature.attributes.SITE,
           address: feature.attributes.ADDRESS,
+          hours: feature.attributes.HOURS,
+          lights: feature.attributes.LIGHTS,
+          bathroom: feature.attributes.BATHROOM,
+          dog_water_fountain: feature.attributes.DOG_WATER_FOUNTAIN,
+          agility_equipment: feature.attributes.AGILITY_EQUIPMENT,
+          climbing_platform: feature.attributes.CLIMBING_PLATFORM,
+          small_dog_area: feature.attributes.SMALL_DOG_AREA,
+          shade: feature.attributes.SHADE,
+          picnic_table: feature.attributes.PICNIC_TABLE,
+          bench: feature.attributes.BENCH,
         }
       });
 
@@ -34,41 +44,8 @@ function getApi() {
 
 
 
-// ~~~~~~~~~~~~~   KAI AND ERNA   ~~~~~~~~~~~~~~~~~~//
-
-
-// fetch('https://data.actmapi.act.gov.au/arcgis/rest/services/data_extract/Community_Facilities_and_Assets/MapServer/5/query?where=1%3D1&outFields=*&outSR=4326&f=json', {
-//   method: 'GET', //GET is the default.
-//   credentials: 'same-origin', // include, *same-origin, omit
-//   redirect: 'follow', // manual, *follow, error
-// })
-//   .then(function (response) {
-//     console.log(response);
-//     // var features = response.features[4];
-
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log('d', data);
-//         for (let i = 0; i < data.features.length; i++) {
-//         console.log(data.features[i]);
-//         };
-//   });
-
-
-
-// api that takes in parameter of city or zipcode 
-// click on submit - save as variable, pass the variable as a query parameter
-
-// see how or if it lets you use zip/city parameters (with current api or new api)
-
-
-
-
 // GENERAL PSEUDO CODE FOR JS - SUBJECT TO CHANGE 
-// 1. get the api to work
-// 2. be able to  filter the api/map for dog parks by zip code
-// 3. make the search button display only results for the zipcode selected
-// 3.a. make sure that the search bar text field deletes the default code when we type 
-//      in the search parameters 
+// 1. get the api to work +  filter for parameters we want to show - DONE 
+// 2. get api info to display on page
+// 3. be able to select which park we would like to display using the dropdown selecter  
 // 4. be able to favorite park and save to local storage 
