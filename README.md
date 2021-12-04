@@ -17,7 +17,6 @@ SO THAT I can combat loneliness and lack of connection brought on by COVID and a
 Our app achieves the user story by meeting the following project acceptance criteria: 
 
     - At least two server side API links 
-    - application uses client-side storage to store persistent data 
     - Application uses client-side storage to store persistent data.
     - Application doesn't use JS alerts, prompts, or confirms (uses modals instead).
     - Application uses a CSS framework other than Bootstrap.
