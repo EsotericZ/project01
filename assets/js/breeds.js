@@ -226,4 +226,6 @@ function updatePage() {
     $("#bredi").attr("class", "fas fa-bone");
     $("#compatible").empty().append("Compatible Breeds");
     $("#hr-line").attr("class", "hr-line");
+    $("#fav").attr("class", "form-control fav");
+    $("#redo").attr("class", "form-control redo");
 }
