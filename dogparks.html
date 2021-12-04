@@ -1,114 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!-- MDBootstrap -->
+    <!-- MDBootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet"/>
-    <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/mdb.min.css" />
-<!-- LINKS TO CSS -->
+    <!-- LINKS TO CSS -->
     <link rel="stylesheet" href="./assets/css/dogparks.css">
 </head>
 
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-    <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-    >
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html"><i class="fas fa-dog"></i>Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="breeds.html"><i class="fas fa-dog"></i>Breeds</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="dogparks.html"><i class="fas fa-dog"></i>Dog Parks</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="calendar.html"><i class="fas fa-dog"></i>Calendar</a>
-            </li>
-        </ul>
-    </div>
-    </div>
-</nav>
-<!-- Navbar -->
-
-<!-- START main containter with instructions -->
-<div
-  class="p-5 text-center bg-image rounded-3"
-  style="
-    background-image: url('./images/dogpark.png');
-    height: 400px;
-">
-  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-    <div class="d-flex justify-content-center align-items-center h-100">
-      <div class="text-white">
-        <h1 class="mb-3">Take your new (or old) best bud to the park of their dreams</h1>
-        <a class="btn btn-outline-light btn-lg" href="#map" role="button">Find Dog Parks Near You</a>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END main containter with instructions -->
-
-<!-- START - this is the parent to the map placeholder and the search so they can be formatted side by side -->
-<div class="container-fluid">
-    <div class="row">
-<!-- placeholder for where the map will display search results -->
-        <img class="col-md-6" id="map" src=".\images\Placeholder Image.jpg" class = "container" alt = "map results" />
-<!-- START pop up selector  -->
-        <div class="dropdown col-md-6">
-            <button
-            class="btn btn-warning dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-            >
-            Select A Park! 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Millbrook-Exchange Dog Park</a></li>
-            <li><a class="dropdown-item" href="#">Buffaloe Road Dog Park</a></li>
-            <li><a class="dropdown-item" href="#">Oakwood Dog Park</a></li>
-            <li><a class="dropdown-item" href="#">OJaycee Dog Run</a></li>
-            <li><a class="dropdown-item" href="#">Carolina Pines Dog Park</a></li>
-            <li><a class="dropdown-item" href="#">Kiwanis Dog Run</a></li>
-            <li><a class="dropdown-item" href="#">Temporary Dorothea Dix Dog Park</a></li>
-            </ul>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-dog"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="breeds.html"><i class="fas fa-dog"></i>Breeds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dogparks.html"><i class="fas fa-dog"></i>Dog Parks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calendar.html"><i class="fas fa-dog"></i>Calendar</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-<!-- END pop up selector  -->
+    </nav>
+    <!-- Navbar -->
+
+    <!-- START main containter with instructions -->
+    <div class="p-5 text-center bg-image rounded-3" style="background-image: url('./images/dogpark.png');
+    height: 400px;">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3">Take your new (or old) best bud to the park of their dreams</h1>
+                    <a class="btn btn-outline-light btn-lg" href="#map" role="button">Find Dog Parks Near You</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<!-- END parent-->
+    <!-- END main containter with instructions -->
 
-<!-- MDB -->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"
-></script>
+    <!-- START - this is the parent to the map placeholder and the search so they can be formatted side by side -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- placeholder for where the map will display search results -->
+            <img class="col-md-6" id="map" src=".\images\Placeholder Image.jpg" class="container" alt="map results" />
+            <!-- START pop up selector  -->
+            <div class="dropdown col-md-6">
+                <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown" aria-expanded="false">
+                    Select A Park!
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Millbrook-Exchange Dog Park</a></li>
+                    <li><a class="dropdown-item" href="#">Buffaloe Road Dog Park</a></li>
+                    <li><a class="dropdown-item" href="#">Oakwood Dog Park</a></li>
+                    <li><a class="dropdown-item" href="#">OJaycee Dog Run</a></li>
+                    <li><a class="dropdown-item" href="#">Carolina Pines Dog Park</a></li>
+                    <li><a class="dropdown-item" href="#">Kiwanis Dog Run</a></li>
+                    <li><a class="dropdown-item" href="#">Temporary Dorothea Dix Dog Park</a></li>
+                </ul>
+            </div>
+            <!-- END pop up selector  -->
+        </div>
+    </div>
+    <!-- END parent-->
 
-<!-- JAVASCRIPT LINKS -->
-<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
+
+    <!-- JAVASCRIPT LINKS -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"
+        type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./assets/js/dogParks.js"></script>
 </body>
 
