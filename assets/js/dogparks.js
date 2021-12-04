@@ -26,18 +26,17 @@ function getApi() {
           bench: feature.attributes.BENCH,
         }
       });
-
-      console.log(sites);
-
-// // // * * * PAGE LOAD CONTROLS * * * // 
-//     //   $('suburbz').autocomplete({
-//     //     source: sites,
-//     //     minLength: 0,
-//     //     scroll: true
-//     //   });
-//     // });
-  });
+    });
 }
+
+let park;
+
+$('a').each(function() {
+  $(this).on('click', function() {
+    park = this.innerHTML;
+    console.log(park)
+  })
+})
 
 
 // GENERAL PSEUDO CODE FOR JS - SUBJECT TO CHANGE 
