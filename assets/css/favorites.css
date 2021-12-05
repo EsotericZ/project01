@@ -44,3 +44,7 @@ i {
     display: none;
     opacity: 0;
 }
+
+h1 {
+    font-size: 30px;
+}
