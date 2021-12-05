@@ -1,0 +1,46 @@
+:root {
+    --black: black;
+    --darkest: rgb(180, 78, 9);
+    --dark: rgb(150, 102, 40);
+    --medium: rgb(179, 139, 83);
+    --light: rgb(224, 199, 165);
+    --accent: rgb(243, 147, 92);
+    --white: white;
+}
+
+html, body {
+    width: 100%;
+    height:100%;
+}
+
+body {
+    background: linear-gradient(-45deg, var(--light), var(--dark), var(--accent), var(--darkest));
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+i {
+    padding: 10px;
+}
+
+.nav-item {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
