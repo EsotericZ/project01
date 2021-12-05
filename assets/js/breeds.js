@@ -240,6 +240,7 @@ $('#redo').click(function() {
 $('#fav').click(function() {
     if (localStorage.getItem('Breeds') === null){
         let newBreed = [dogBreed];
+        localStorage.setItem('Breeds', JSON.stringify(newBreed));
     } else {
         console.log('now')
         a = JSON.parse(localStorage.getItem('Breeds')) || [];
