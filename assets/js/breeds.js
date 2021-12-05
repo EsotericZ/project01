@@ -158,7 +158,15 @@ function getApi2() {
         $("#bn"+[i]).append(compBreed[i]);
         $("#i"+[i]).attr("class", "fas fa-paw");
         $("#cr"+[i]).append(compStrength[i]);
-        $("#cr"+[i]).attr("class", "compRate");
+        if (compStrength[i] > 8) {
+            $("#cr"+[i]).attr("class", "compRateG");
+        } else if (compStrength[i] > 6) {
+            $("#cr"+[i]).attr("class", "compRateH");
+        } else if (compStrength[i] > 3) {
+            $("#cr"+[i]).attr("class", "compRateM");
+        } else {
+            $("#cr"+[i]).attr("class", "compRateL");
+        }
     }
 
     setTimeout( function() { 
