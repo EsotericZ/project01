@@ -8,6 +8,7 @@ let compBreedNo = [];
 let compStrength = [];
 let compBreed = [];
 let compBreedPic = [];
+let a = [];
 
 let allBreeds = [
     ["Cocker Spaniel", 86, 121, 9, 127, 9, 149, 9, 30, 8, 50, 8, 15, 1, 'spaniel', 64],
@@ -230,33 +231,21 @@ function updatePage() {
     $("#redo").attr("class", "form-control redo");
 }
 
+//Refresh Page
+$('#redo').click(function() {
+    location.reload();
+});
+
 //localStorage
 $('#fav').click(function() {
-    console.log("running")
     if (localStorage.getItem('Breeds') === null){
-        localStorage.setItem('Breeds', JSON.stringify(dogBreed));
+        let newBreed = [dogBreed];
+    } else {
+        console.log('now')
+        a = JSON.parse(localStorage.getItem('Breeds')) || [];
+        if (jQuery.inArray(dogBreed, a) === -1) {
+            a.push(dogBreed);
+            localStorage.setItem('Breeds', JSON.stringify(a));
+        }
     }
 })
-
-//     let storage = {times: time, text: text};
-//     console.log(storage);
-//     dataStorage.push(storage);
-//     console.log(dataStorage);
-//     localStorage.setItem("dataStorage", JSON.stringify(dataStorage));
-// })
-// let dataStorage = [];
-// let storedData = JSON.parse(localStorage.getItem("dataStorage"));
-// console.log(storedData);
-// storedData.forEach(element => {
-//     console.log(element)
-//     let checkTime = element.times;
-//     let checkMsg = element.text;
-//     console.log(checkTime, checkMsg)
-//     for (let i = 1; i < 10; i++) {
-//         console.log('i', i)
-//         let checkId = $(`#${i}`).parent().children()[0].innerHTML;
-//         if (checkTime == checkId) {
-//             $(`#${i}`).parent().children()[1].textContent = checkMsg;
-//         }
-//     }
-// });
