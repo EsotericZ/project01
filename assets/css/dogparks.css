@@ -8,6 +8,18 @@
     --white: white;
 }
 
+#parkAtt {
+    list-style: none;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.dropdown {
+    margin-top: 5%;
+}
+
+
+
 /* THIS IS THE CODE FOR THE BACKGROUND IF WANTED OTHERWISE DELETE */
 
 /* html, body {
