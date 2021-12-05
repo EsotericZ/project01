@@ -59,6 +59,7 @@ div > h1 {
     font-weight: bold;
     color: black;
 }
+
 #parks {
     text-align: center;
     font-size: 35px;
@@ -86,6 +87,7 @@ div > div > a {
     max-height: 750px;
     border: 2px solid black;
 }
+
 .centered {
     position: absolute;
     top: 40%;

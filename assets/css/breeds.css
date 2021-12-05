@@ -8,10 +8,6 @@
     --white: white;
 }
 
-/* body {
-    background-color: var(--light);
-} */
-
 html, body {
     width: 100%;
     height:100%;
@@ -170,6 +166,10 @@ i {
     padding-bottom: 20px;
 }
 
+#middleRow {
+    justify-content: center;
+}
+
 p {
     text-align: center;
     padding-top: 20px;
@@ -185,20 +185,68 @@ div.hr-line {
     border: 1px solid black;
 }
 
-.compRate {
+.compRateG {
     position: absolute;
     top: 5%;
     left: 75%;
     transform: translate(-50%, -50%);
     background: 300px;
-    background-color: var(--accent);
+    background-color: green;
     padding: 10px;
     padding-left: 22px;
     padding-right: 22px;
     font-size: 25px;
     border-radius: 50%;
     color: black;
-    border: solid 1px var(--darkest);
+    border: solid 1px black;
+}
+
+.compRateH {
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    background: 300px;
+    background-color: rgb(4, 235, 4);
+    padding: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 25px;
+    border-radius: 50%;
+    color: black;
+    border: solid 1px black;
+}
+
+.compRateM {
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    background: 300px;
+    background-color: orange;
+    padding: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 25px;
+    border-radius: 50%;
+    color: black;
+    border: solid 1px black;
+}
+
+.compRateL {
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    background: 300px;
+    background-color: red;
+    padding: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 25px;
+    border-radius: 50%;
+    color: black;
+    border: solid 1px black;
 }
 
 .hidden1, .hidden2 {
@@ -212,10 +260,11 @@ div.hr-line {
     color: black;
     display: grid;
     font-size: 17px;
-    margin: 15px;
     text-align: center;
     cursor: pointer;
     width: 250px;
     border: 1px solid black;
     font-weight: bold;
+    margin-left: 25px;
+    margin-right: 25px;
 }
