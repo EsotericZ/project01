@@ -207,7 +207,7 @@ div.hr-line {
 }
 
 .fav, .redo {
-    background-color: red;
+    background-color: var(--darkest);
     border-radius: 5px;
     color: black;
     display: grid;
@@ -216,4 +216,6 @@ div.hr-line {
     text-align: center;
     cursor: pointer;
     width: 250px;
+    border: 1px solid black;
+    font-weight: bold;
 }
