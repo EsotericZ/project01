@@ -78,14 +78,15 @@ function parkInfo() {
 }
 
 
+// https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBdqrAW7JCvzN5wE8XSU28P4gqyt9S_pgM
 
 // MAP API
 let map;
 
-function initMap() {
-  let millbrook = {lat: 35.869818729414604, long: -78.60565780025577};
+function initMap(x, y) {
+  // let millbrook = {lat: 35.869818729414604, lon: -78.60565780025577};
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
+    center: { lat: x, lng: y },
     zoom: 8,
   });
 }
@@ -95,12 +96,16 @@ for (let i = 0; i < parks.length; i++) {
   parks[i].addEventListener("click", selectPark)
 }
 function selectPark(event) {
-  console.log(event.target.id);
+  // console.log(parkData);
+  // console.log(event.target.innerText);
   for (let i = 0; i < parkData.length; i++) {
-    if (event.target.id == parkData[i].attributes.site){
+    if (event.target.innerText == parkData[i].attributes.SITE){
       console.log(parkData[i].geometry.x, parkData[i].geometry.y);
+      var x = parseInt(parkData[i].geometry.x);
+      var y = parseInt(parkData[i].geometry.y);
+      initMap(x, y);
     }
-    console.log(parkData[i].attributes.site);
+    // console.log(parkData[i].attributes.SITE);
   }
   
 }

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/dogparks.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico?">
     <title>Puppy Love</title>
+    
 </head>
 
 <body>
@@ -61,9 +62,6 @@
         <div class="row">
             <!-- placeholder for where the map will display search results -->
             <div id="map">
-                <script>
-
-                </script>
             </div>
             <!-- START pop up selector  -->
             <div class="parkSelectnInfo col-md-6">
@@ -73,13 +71,13 @@
                         Select A Park!
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" id="millbrook">Millbrook-Exchange Dog Park</a></li>
-                        <li><a class="dropdown-item" id="buffaloe">Buffaloe Road Dog Park</a></li>
-                        <li><a class="dropdown-item" id="oakwood">Oakwood Dog Park</a></li>
-                        <li><a class="dropdown-item" id="ojaycee">Jaycee Dog Run</a></li>
-                        <li><a class="dropdown-item" id="carolina">Carolina Pines Dog Park</a></li>
-                        <li><a class="dropdown-item" id="kiwanis">Kiwanis Dog Run</a></li>
-                        <li><a class="dropdown-item" id="temporary">Temporary Dorothea Dix Dog Park</a></li>
+                        <li><a class="dropdown-item park" id="millbrook">Millbrook-Exchange Dog Park</a></li>
+                        <li><a class="dropdown-item park" id="buffaloe">Buffaloe Road Dog Park</a></li>
+                        <li><a class="dropdown-item park" id="oakwood">Oakwood Dog Park</a></li>
+                        <li><a class="dropdown-item park" id="ojaycee">Jaycee Dog Run</a></li>
+                        <li><a class="dropdown-item park" id="carolina">Carolina Pines Dog Park</a></li>
+                        <li><a class="dropdown-item park" id="kiwanis">Kiwanis Dog Run</a></li>
+                        <li><a class="dropdown-item park" id="temporary">Temporary Dorothea Dix Dog Park</a></li>
                     </ul>
                 </div>
                 <ul id="parkAtt">
@@ -98,6 +96,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./assets/js/dogParks.js"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdqrAW7JCvzN5wE8XSU28P4gqyt9S_pgM&callback=initMap">
+</script>
 </body>
 
 </html>
