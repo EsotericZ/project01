@@ -1,4 +1,6 @@
 // * * * FUNCTIONS * * * //
+let parkData;
+
 let sites;
 getApi();
 
@@ -10,6 +12,8 @@ function getApi() {
     })
     .then(function (data) {
       console.log(data.features);
+      parkData = data.features;
+      console.log(parkData);
       sites = data.features.map(function (feature) {
         return {
           site: feature.attributes.SITE,
@@ -74,19 +78,39 @@ function parkInfo() {
 }
 
 
+// https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBdqrAW7JCvzN5wE8XSU28P4gqyt9S_pgM
 
 // MAP API
 let map;
 
-function initMap() {
-  let millbrook = {lat: 35.869818729414604, long: -78.60565780025577};
+function initMap(x, y) {
+  // let millbrook = {lat: 35.869818729414604, lon: -78.60565780025577};
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
+    center: { lat: x, lng: y },
     zoom: 8,
   });
 }
 
-
+var parks = document.querySelectorAll(".park")
+for (let i = 0; i < parks.length; i++) {
+  parks[i].addEventListener("click", selectPark)
+}
+function selectPark(event) {
+  // console.log(parkData);
+  // console.log(event.target.innerText);
+  for (let i = 0; i < parkData.length; i++) {
+    if (event.target.innerText == parkData[i].attributes.SITE){
+      console.log(parkData[i].geometry.x, parkData[i].geometry.y);
+      var x = parseInt(parkData[i].geometry.x);
+      var y = parseInt(parkData[i].geometry.y);
+      var src = src=`https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=${y},%20${x}+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed`
+      var mapFrame = document.getElementById("mapFrame");
+      mapFrame.src = src;
+    }
+    // console.log(parkData[i].attributes.SITE);
+  }
+  
+}
 
 // GENERAL PSEUDO CODE FOR JS - SUBJECT TO CHANGE 
 // 1. get the api to work +  filter for parameters we want to show - DONE 
