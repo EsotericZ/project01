@@ -103,7 +103,9 @@ function selectPark(event) {
       console.log(parkData[i].geometry.x, parkData[i].geometry.y);
       var x = parseInt(parkData[i].geometry.x);
       var y = parseInt(parkData[i].geometry.y);
-      initMap(x, y);
+      var src = src=`https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=${y},%20${x}+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed`
+      var mapFrame = document.getElementById("mapFrame");
+      mapFrame.src = src;
     }
     // console.log(parkData[i].attributes.SITE);
   }
