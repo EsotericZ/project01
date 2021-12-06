@@ -48,6 +48,7 @@ let a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12;
 function parkInfo() {
   for (let i=0; i < sites.length; i++) {
     if (sites[i].site==park) {
+      favoritePark = sites[i];
       a1=sites[i].site;
       a2=sites[i].address;
       a3=sites[i].hours;
@@ -62,6 +63,7 @@ function parkInfo() {
       a12=sites[i].bench;
     }
   } 
+  console.log(favoritePark);
   $('#parkAtt').empty();
   $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Name of Dog Park: ${a1}</li>`);
   $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Address: ${a2} </li>`);
@@ -90,6 +92,19 @@ function initMap(x, y) {
     zoom: 8,
   });
 }
+// Favorite Parks - Local Storage
+var favoritePark;
+var favParks;
+if (localStorage.getItem("favParks")){
+  favParks = JSON.parse(localStorage.getItem("favParks"));
+} else {
+  favParks = [];
+}
+var favPark = document.getElementById("favParks");
+favPark.addEventListener("click", function(){
+  favParks.push(favoritePark);
+  localStorage.setItem("favParks", JSON.stringify(favParks))
+})
 
 var parks = document.querySelectorAll(".park")
 for (let i = 0; i < parks.length; i++) {
