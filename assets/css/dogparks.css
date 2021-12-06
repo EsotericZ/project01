@@ -28,7 +28,9 @@ html, body {
     padding: 0;
 }
 
-
+.hidden {
+    display: none;
+}
 
 
 /* THIS IS THE CODE FOR THE BACKGROUND IF WANTED OTHERWISE DELETE */
