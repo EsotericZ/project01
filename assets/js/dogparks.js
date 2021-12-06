@@ -1,4 +1,6 @@
 // * * * FUNCTIONS * * * //
+let parkData;
+
 let sites;
 getApi();
 
@@ -10,6 +12,8 @@ function getApi() {
     })
     .then(function (data) {
       console.log(data.features);
+      parkData = data.features;
+      console.log(parkData);
       sites = data.features.map(function (feature) {
         return {
           site: feature.attributes.SITE,
@@ -86,7 +90,20 @@ function initMap() {
   });
 }
 
-
+var parks = document.querySelectorAll(".park")
+for (let i = 0; i < parks.length; i++) {
+  parks[i].addEventListener("click", selectPark)
+}
+function selectPark(event) {
+  console.log(event.target.id);
+  for (let i = 0; i < parkData.length; i++) {
+    if (event.target.id == parkData[i].attributes.site){
+      console.log(parkData[i].geometry.x, parkData[i].geometry.y);
+    }
+    console.log(parkData[i].attributes.site);
+  }
+  
+}
 
 // GENERAL PSEUDO CODE FOR JS - SUBJECT TO CHANGE 
 // 1. get the api to work +  filter for parameters we want to show - DONE 
