@@ -8,10 +8,10 @@ $(function() {
         favBreed = JSON.parse(localStorage.getItem("Breeds")) || [];
     }
     
-    if (localStorage.getItem("Parks") === null) {
+    if (localStorage.getItem("favParks") === null) {
         favPark = ['No Favorite Parks!'];
     } else {
-        favPark = JSON.parse(localStorage.getItem("Parks")) || [];
+        favPark = JSON.parse(localStorage.getItem("favParks")) || [];
     }
     addFavs()
 })
@@ -23,7 +23,8 @@ function addFavs() {
     }
 
     for (let i = 0; i < favPark.length; i++) {
-        $("#dp"+i).append(favPark[i]);
+        $("#dp"+i).append(favPark[i].site);
         $("#dp"+i).removeClass('hidden');
     }
 }
+
