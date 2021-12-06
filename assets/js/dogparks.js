@@ -73,6 +73,21 @@ function parkInfo() {
   $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Bench: ${a12}</li>`);
 }
 
+
+
+// MAP API
+let map;
+
+function initMap() {
+  let millbrook = {lat: 35.869818729414604, long: -78.60565780025577};
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+  });
+}
+
+
+
 // GENERAL PSEUDO CODE FOR JS - SUBJECT TO CHANGE 
 // 1. get the api to work +  filter for parameters we want to show - DONE 
 // 2. be able to select which park we would like to display information using the dropdown selecter -DONE

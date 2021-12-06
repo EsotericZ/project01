@@ -18,22 +18,29 @@
     margin-top: 5%;
 }
 
+/* MAP styling */
+#map {
+    width: 600px;
+    height: 400px;
+    background-color: grey;
+}
+
 
 
 /* THIS IS THE CODE FOR THE BACKGROUND IF WANTED OTHERWISE DELETE */
-
-/* html, body {
+/* 
+html, body {
     width: 100%;
     height:100%;
-} */
+}
 
-/* body {
+body {
     background: linear-gradient(-45deg, var(--light), var(--dark), var(--accent), var(--darkest));
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
-} */
+}
 
-/* @keyframes gradient {
+@keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
@@ -44,6 +51,8 @@
         background-position: 0% 50%;
     }
 } */
+
+
 
 /* IF YOU USE THE CODE ABOVE TURN OFF THE BODY BELOW */
 
@@ -59,3 +68,4 @@ i {
     padding-left: 50px;
     padding-right: 50px;
 }
+
