@@ -8,7 +8,6 @@ function getApi() {
   fetch('https://services.arcgis.com/v400IkDOw1ad7Yad/arcgis/rest/services/DogParkLocations_Existing_PUBLIC/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
     .then(function (response) {
       return response.json();
-     
     })
     .then(function (data) {
       console.log(data.features);
@@ -28,6 +27,7 @@ function getApi() {
           shade: feature.attributes.SHADE,
           picnic_table: feature.attributes.PICNIC_TABLE,
           bench: feature.attributes.BENCH,
+          park_ID: feature.attributes.PARKID,
         }
       });
     });
@@ -35,34 +35,34 @@ function getApi() {
 
 let park;
 
-$('.dropdown-item').each(function() {
-  $(this).on('click', function() {
+$('.dropdown-item').each(function () {
+  $(this).on('click', function () {
     park = this.innerHTML;
     console.log(park)
     parkInfo()
   })
 })
 
-let a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12;
+let a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12;
 
 function parkInfo() {
-  for (let i=0; i < sites.length; i++) {
-    if (sites[i].site==park) {
+  for (let i = 0; i < sites.length; i++) {
+    if (sites[i].site == park) {
       favoritePark = sites[i];
-      a1=sites[i].site;
-      a2=sites[i].address;
-      a3=sites[i].hours;
-      a4=sites[i].lights;
-      a5=sites[i].bathroom;
-      a6=sites[i].dog_water_fountain;
-      a7=sites[i].agility_equipment;
-      a8=sites[i].climbing_platform;
-      a9=sites[i].small_dog_area;
-      a10=sites[i].shade;
-      a11=sites[i].picnic_table;
-      a12=sites[i].bench;
+      a1 = sites[i].site;
+      a2 = sites[i].address;
+      a3 = sites[i].hours;
+      a4 = sites[i].lights;
+      a5 = sites[i].bathroom;
+      a6 = sites[i].dog_water_fountain;
+      a7 = sites[i].agility_equipment;
+      a8 = sites[i].climbing_platform;
+      a9 = sites[i].small_dog_area;
+      a10 = sites[i].shade;
+      a11 = sites[i].picnic_table;
+      a12 = sites[i].bench;
     }
-  } 
+  }
   console.log(favoritePark);
   $('#parkAtt').empty();
   $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Name of Dog Park: ${a1}</li>`);
@@ -85,23 +85,25 @@ function parkInfo() {
 // MAP API
 let map;
 
-function initMap(x, y) {
-  // let millbrook = {lat: 35.869818729414604, lon: -78.60565780025577};
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: x, lng: y },
-    zoom: 8,
-  });
-}
+// function initMap(x, y) {
+//   // let millbrook = {lat: 35.869818729414604, lon: -78.60565780025577};
+//   map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: x, lng: y },
+//     zoom: 8,
+//   });
+// }
+
+
 // Favorite Parks - Local Storage
 var favoritePark;
 var favParks;
-if (localStorage.getItem("favParks")){
+if (localStorage.getItem("favParks")) {
   favParks = JSON.parse(localStorage.getItem("favParks"));
 } else {
   favParks = [];
 }
 var favPark = document.getElementById("favParks");
-favPark.addEventListener("click", function(){
+favPark.addEventListener("click", function () {
   favParks.push(favoritePark);
   localStorage.setItem("favParks", JSON.stringify(favParks))
 })
@@ -113,18 +115,20 @@ for (let i = 0; i < parks.length; i++) {
 function selectPark(event) {
   // console.log(parkData);
   // console.log(event.target.innerText);
+  var parks = document.querySelectorAll(".park2");
+  for (let j = 0; j < parks.length; j++) {
+    parks[j].classList.add("hidden");
+  }
   for (let i = 0; i < parkData.length; i++) {
-    if (event.target.innerText == parkData[i].attributes.SITE){
-      console.log(parkData[i].geometry.x, parkData[i].geometry.y);
-      var x = parseInt(parkData[i].geometry.x);
-      var y = parseInt(parkData[i].geometry.y);
-      var src = src=`https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=${y},%20${x}+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed`
-      var mapFrame = document.getElementById("mapFrame");
-      mapFrame.src = src;
+    if (event.target.innerText == parkData[i].attributes.SITE) {
+      console.log(parkData[i].attributes.PARKID);
+      var id = parkData[i].attributes.PARKID;
+      var map = document.getElementById(`park${id}`);
+      map.classList.remove("hidden");
     }
     // console.log(parkData[i].attributes.SITE);
   }
-  
+
 }
 
 // GENERAL PSEUDO CODE FOR JS - SUBJECT TO CHANGE 
