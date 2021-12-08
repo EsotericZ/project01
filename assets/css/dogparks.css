@@ -37,6 +37,22 @@ html, body {
     opacity: 0;
 }
 
+#favParks {
+    box-sizing: border-box;
+    background-color: var(--darkest);
+    border-radius: 5px;
+    color: black;
+    display: grid;
+    font-size: 17px;
+    text-align: center;
+    cursor: pointer;
+    width: 250px;
+    border: 1px solid black;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
 /* THIS IS THE CODE FOR THE BACKGROUND IF WANTED OTHERWISE DELETE  */
 
 html, body {
