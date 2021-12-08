@@ -91,6 +91,10 @@ body {
     }
 }
 
+i {
+    padding: 10px;
+}
+
 .nav-item {
     padding-left: 50px;
     padding-right: 50px;
