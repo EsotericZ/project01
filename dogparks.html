@@ -14,6 +14,8 @@
 </head>
 
 <body>
+
+    <!-- START Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
@@ -38,13 +40,15 @@
         </div>
     </nav>
 
+    <!-- END Navbar -->
+
     <div class="p-5 text-center bg-image rounded-3" style="background-image: url('./images/dogpark.png');
     height: 400px;">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
             <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="text-white">
                     <h1 class="mb-3">Take your new (or old) best bud to the park of their dreams</h1>
-                    <a class="btn btn-outline-light btn-lg" href="#map" role="button">Find Dog Parks Near You</a>
+                    <a class="btn btn-outline-light btn-lg" href="#dropdownMenuButton" role="button">Find Dog Parks Near You</a>
                 </div>
             </div>
         </div>
@@ -52,14 +56,20 @@
     <!-- END main containter with instructions -->
 
     <!-- START - this is the parent to the map placeholder and the search so they can be formatted side by side -->
-    <div class="container-fluid">
-        <div class="row">
-            <!-- placeholder for where the map will display search results -->
-            <div id="map">
+    <div class="container-fluid row">
+            <!-- MAP iFrames -->
+            <div id="map" class="col-md-6">
+                <div id="park152" class="hidden park2"><iframe id="mapFrame" width="100%" height="100%" frameborder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.869818729414604,%20-78.60565780025577+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                <div id="park144" class="hidden park2"><iframe id="mapFrame" frameborder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.83690371799207,%20-78.53650477670688+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                <div id="park42" class="hidden park2"><iframe id="mapFrame" frameborder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.79023635093588,%20-78.62355886548264+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                <div id="park90" class="hidden park2"><iframe id="mapFrame" frameborder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.7991466802062,%20-78.66334259193646+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                <div id="park145" class="hidden park2"><iframe id="mapFrame" frameborder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.748644433968096,%20-78.66429949881419+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                <div id="park38" class="hidden park2"><iframe id="mapFrame" frameborder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.81737212817289,%20-78.63152222397323+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                <div id="park176" class="hidden park2"><iframe id="mapFrame" frameborder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.76702680497167,%20-78.6542917774841+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
             </div>
             <!-- START pop up selector  -->
             <div class="parkSelectnInfo col-md-6">
-                <div class="dropdown col-md-6">
+                <div class="dropdown">
                     <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-mdb-toggle="dropdown" aria-expanded="false">
                         Select A Park!
@@ -81,15 +91,6 @@
         </div>
     </div>
     <!-- END parent-->
-
-    <!-- MAP iFrames -->
-    <div id="park152" class="hidden park2" style="width: 100%"><iframe id="mapFrame" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.869818729414604,%20-78.60565780025577+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-    <div id="park144" class="hidden park2" style="width: 100%"><iframe id="mapFrame" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.83690371799207,%20-78.53650477670688+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-    <div id="park42" class="hidden park2" style="width: 100%"><iframe id="mapFrame" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.79023635093588,%20-78.62355886548264+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-    <div id="park90" class="hidden park2" style="width: 100%"><iframe id="mapFrame" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.7991466802062,%20-78.66334259193646+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-    <div id="park145" class="hidden park2" style="width: 100%"><iframe id="mapFrame" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.748644433968096,%20-78.66429949881419+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-    <div id="park38" class="hidden park2" style="width: 100%"><iframe id="mapFrame" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.81737212817289,%20-78.63152222397323+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-    <div id="park176" class="hidden park2" style="width: 100%"><iframe id="mapFrame" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=35.76702680497167,%20-78.6542917774841+(Dog%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
