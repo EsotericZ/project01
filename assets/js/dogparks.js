@@ -4,15 +4,14 @@ let parkData;
 let sites;
 getApi();
 
+// this gets the API for the dog park attributes and filters info by what we want
 function getApi() {
   fetch('https://services.arcgis.com/v400IkDOw1ad7Yad/arcgis/rest/services/DogParkLocations_Existing_PUBLIC/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data.features);
       parkData = data.features;
-      console.log(parkData);
       sites = data.features.map(function (feature) {
         return {
           site: feature.attributes.SITE,
@@ -35,16 +34,17 @@ function getApi() {
 
 let park;
 
+// this allows the drop down items from the drop down menu created in HTML to call the function parkInfo
 $('.dropdown-item').each(function () {
   $(this).on('click', function () {
     park = this.innerHTML;
-    console.log(park)
     parkInfo()
   })
 })
 
 let a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12;
 
+// this associates the drop down item to the site info from the API
 function parkInfo() {
   for (let i = 0; i < sites.length; i++) {
     if (sites[i].site == park) {
@@ -63,6 +63,8 @@ function parkInfo() {
       a12 = sites[i].bench;
     }
   }
+
+  // this displays the inforamtion from the API dog park attributes to the page
   console.log(favoritePark);
   $('#parkAtt').empty();
   $('#parkAtt').append(`<li id="dogParkName"> <i class="fas fa-paw"></i> Name of Dog Park: ${a1}</li>`)
@@ -80,20 +82,8 @@ function parkInfo() {
   $("#favParks").attr("class", "form-control fav");
 }
 
-
-// https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBdqrAW7JCvzN5wE8XSU28P4gqyt9S_pgM
-
 // MAP API
 let map;
-
-// function initMap(x, y) {
-//   // let millbrook = {lat: 35.869818729414604, lon: -78.60565780025577};
-//   map = new google.maps.Map(document.getElementById("map"), {
-//     center: { lat: x, lng: y },
-//     zoom: 8,
-//   });
-// }
-
 
 // Favorite Parks - Local Storage
 var favoritePark;
@@ -114,8 +104,6 @@ for (let i = 0; i < parks.length; i++) {
   parks[i].addEventListener("click", selectPark)
 }
 function selectPark(event) {
-  // console.log(parkData);
-  // console.log(event.target.innerText);
   var parks = document.querySelectorAll(".park2");
   for (let j = 0; j < parks.length; j++) {
     parks[j].classList.add("hidden");
@@ -127,7 +115,6 @@ function selectPark(event) {
       var map = document.getElementById(`park${id}`);
       map.classList.remove("hidden");
     }
-    // console.log(parkData[i].attributes.SITE);
   }
 
 }
