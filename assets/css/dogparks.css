@@ -52,7 +52,7 @@ html, body {
     border: 1px solid black;
     font-weight: bold;
     margin: auto;
-    padding-top: 9px;
+    padding: 10px;
 }
 
 #parkAtt {
@@ -104,7 +104,12 @@ body {
 }
 
 i {
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.fas fa-heart {
+    padding: none;
 }
 
 .nav-item {
