@@ -30,6 +30,6 @@ https://esotericz.github.io/project01/
 # Future Features
     - Create DataBase to store breed compatibility information
     - Add more dog breeds
-    - Expland dog park search area to all of US
+    - Expand dog park search area to all of US
 
 # Sources 
