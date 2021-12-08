@@ -94,3 +94,22 @@ div.class {
     max-height: 750px;
     border: 2px solid black;
 }
+@media only screen and (max-width: 990px) {
+    .centered {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: 300px;
+        padding: 20px;
+        font-size: 45px;
+        font-weight: bolder;
+        font-style: italic;
+        color:black;
+    }
+
+
+    .fas {
+        display: none;
+  }
+}
