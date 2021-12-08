@@ -103,6 +103,12 @@ $(function() {
   
     $('#message_submit').on('click', function() {
         dogBreed = $('#tbBreeds').val();
+        console.log("db", dogBreed);
+        if(!dogBreed) {
+            console.log('ran')
+            location.reload();
+            return false;
+        } 
         for (let i = 0; i < allBreeds.length; i++) {
             if (allBreeds[i][0] === dogBreed) {
                 dogBreedPic = allBreeds[i][14];

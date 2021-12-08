@@ -9,7 +9,7 @@ $(function() {
     }
     
     if (localStorage.getItem("favParks") === null) {
-        favPark = ['No Favorite Parks!'];
+        favPark = [{site: 'No Favorite Parks!'}];
     } else {
         favPark = JSON.parse(localStorage.getItem("favParks")) || [];
     }
