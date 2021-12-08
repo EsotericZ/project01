@@ -77,6 +77,7 @@ function parkInfo() {
   $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Shade: ${a10}</li>`);
   $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Picnic Table: ${a11}</li>`);
   $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Bench: ${a12}</li>`);
+  $("#favParks").attr("class", "form-control fav");
 }
 
 
