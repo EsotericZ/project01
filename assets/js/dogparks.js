@@ -131,10 +131,3 @@ function selectPark(event) {
   }
 
 }
-
-// GENERAL PSEUDO CODE FOR JS - SUBJECT TO CHANGE 
-// 1. get the api to work +  filter for parameters we want to show - DONE 
-// 2. be able to select which park we would like to display information using the dropdown selecter -DONE
-// 3. get api info to display on page -DONE
-// 4. get google api to associate with each park and diplay that onto the page
-// 5. be able to favorite park and save to local storage
