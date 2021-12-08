@@ -91,18 +91,6 @@ body {
     }
 }
 
-
-
-/* IF YOU USE THE CODE ABOVE TURN OFF THE BODY BELOW */
-
- /* body {
-    background-color: var(--light);
-}
-
-i {
-    padding: 10px;
-} */
-
 .nav-item {
     padding-left: 50px;
     padding-right: 50px;
