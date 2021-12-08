@@ -32,9 +32,13 @@ html, body {
     display: none;
 }
 
+.hidden1 {
+    display: none;
+    opacity: 0;
+}
 
-/* THIS IS THE CODE FOR THE BACKGROUND IF WANTED OTHERWISE DELETE */
-/* 
+/* THIS IS THE CODE FOR THE BACKGROUND IF WANTED OTHERWISE DELETE  */
+
 html, body {
     width: 100%;
     height:100%;
@@ -56,13 +60,13 @@ body {
     100% {
         background-position: 0% 50%;
     }
-} */
+}
 
 
 
 /* IF YOU USE THE CODE ABOVE TURN OFF THE BODY BELOW */
 
-body {
+/* body {
     background-color: var(--light);
 }
 
@@ -73,5 +77,5 @@ i {
 .nav-item {
     padding-left: 50px;
     padding-right: 50px;
-}
+} */
 
