@@ -231,7 +231,7 @@ function updatePage() {
     $("#dogWi").attr("class", "fas fa-bone");
     $("#dogHeight").append(`Height Range (in): ${dogHeight}`);
     $("#dogHi").attr("class", "fas fa-bone");
-    $("#breedingGroup").append(`Breed Group ${breedingGroup}`);
+    $("#breedingGroup").append(`Breed Group: ${breedingGroup}`);
     $("#breedi").attr("class", "fas fa-bone");
     $("#lifeSpan").append(`Life Span: ${lifeSpan}`);
     $("#lifeSi").attr("class", "fas fa-bone");
