@@ -67,18 +67,18 @@ function parkInfo() {
   // this displays the inforamtion from the API dog park attributes to the page
   console.log(favoritePark);
   $('#parkAtt').empty();
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Name of Dog Park: ${a1}</li>`);
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Address: ${a2} </li>`);
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Hours of Operation: ${a3}</li>`);
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Lights: ${a4}</li>`);
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Bathrooms: ${a5}</li>`);
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Dog Water Fountain: ${a6}</li>`);
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Agility Equipment: ${a7}</li>`);
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Climbing Platform: ${a8}</li>`);
-  $('#parkAtt').append(`<li><i class="fas fa-bone"></i> Small Dog Area: ${a9}</li>`);
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Shade: ${a10}</li>`);
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Picnic Table: ${a11}</li>`);
-  $('#parkAtt').append(`<li> <i class="fas fa-bone"></i> Bench: ${a12}</li>`);
+  $('#parkAtt').append(`<li id="dogParkName"> <i class="fas fa-paw"></i> Name of Dog Park: ${a1}</li>`)
+  $('#parkAtt').append(`<li class="dogParkInfo"> <i class="fas fa-bone"></i> Address: ${a2} </li>`);
+  $('#parkAtt').append(`<li class="dogParkInfo"> <i class="fas fa-bone"></i> Hours of Operation: ${a3}</li>`);
+  $('#parkAtt').append(`<li class="dogParkInfo"> <i class="fas fa-bone"></i> Lights: ${a4}</li>`);
+  $('#parkAtt').append(`<li class="dogParkInfo"> <i class="fas fa-bone"></i> Bathrooms: ${a5}</li>`);
+  $('#parkAtt').append(`<li class="dogParkInfo"> <i class="fas fa-bone"></i> Dog Water Fountain: ${a6}</li>`);
+  $('#parkAtt').append(`<li class="dogParkInfo"> <i class="fas fa-bone"></i> Agility Equipment: ${a7}</li>`);
+  $('#parkAtt').append(`<li class="dogParkInfo"> <i class="fas fa-bone"></i> Climbing Platform: ${a8}</li>`);
+  $('#parkAtt').append(`<li class="dogParkInfo"><i class="fas fa-bone"></i> Small Dog Area: ${a9}</li>`);
+  $('#parkAtt').append(`<li class="dogParkInfo"> <i class="fas fa-bone"></i> Shade: ${a10}</li>`);
+  $('#parkAtt').append(`<li class="dogParkInfo"> <i class="fas fa-bone"></i> Picnic Table: ${a11}</li>`);
+  $('#parkAtt').append(`<li class="dogParkInfo"> <i class="fas fa-bone"></i> Bench: ${a12}</li>`);
   $("#favParks").attr("class", "form-control fav");
 }
 
