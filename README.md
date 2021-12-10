@@ -9,7 +9,7 @@ HTML, CSS, JavaScript
 
 # User Story
 AS A dog owner or prospective dog owner
-I WANT to know what dog breeds are compatible my lifestyle (if first time dog owner) or with compatible with the dog I already have, as well as locating nearby dog parks to be able to take them to and be able to favorite them,
+I WANT to know what dog breeds are compatible my lifestyle (if first time dog owner) or compatible with the dog I already have, as well as locating nearby dog parks to take them to,
 SO THAT I can pick the right dog to add to my family, and know where to take my dog to play and refer back to breeds and parks I favorite. 
 
 # Description
