@@ -22,7 +22,7 @@ Our app achieves the user story by meeting the following project acceptance crit
     - Application is interactive (accepts and responds to user input)
 
 # Website
-https://esotericz.github.io/project01/
+https://esotericz.github.io/puppylove/
 
 ![Alt text](/images/screenshot.png?raw=true "Project 01 Screenshot")
 
